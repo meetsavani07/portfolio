@@ -13,7 +13,7 @@ In the project directory, you can run:
 Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it in your broweser.
 
 # In This code
-  **1. LInks**\
+  1. LInks\
     ● [https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)\
         This Link to Use Give Awesome font in webpage.  
 
@@ -27,4 +27,4 @@ Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it 
         This link is to use a social media icon in a webpage; this link is defined as a CSS link for the display icon.
 
      ● [https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js](https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js)\
-        This Link use for 
+        This link is used for automatic typing in the webpage
