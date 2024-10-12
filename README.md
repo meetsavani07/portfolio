@@ -13,8 +13,8 @@ In the project directory, you can run:
 Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it in your broweser.
 
 # In This code
-  1. LInks\
-    ● [https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)\
+  1. Links\
+     ● [https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)\
         This Link to Use Give Awesome font in webpage.  
 
      ● [https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css](https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css)\
@@ -28,3 +28,7 @@ Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it 
 
      ● [https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js](https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js)\
         This link is used for automatic typing in the webpage
+
+  2. API [https://api.web3forms.com/submit](https://api.web3forms.com/submit)\
+     Go to this website [https://web3forms.com/](https://web3forms.com/) See first page Create your access key, and enter your email address. Check the email   
+     in this email to have your access key. this key implementation in this code, first input tag use with values attribute 
