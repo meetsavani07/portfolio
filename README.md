@@ -5,7 +5,7 @@ This project was bootstrapped with [HTML]
 ## Available Scripts
   ● index.html\
   ● style.css\
-  ● main.js\
+  ● main.js
 
 In the project directory, you can run:
 
