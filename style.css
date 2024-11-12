@@ -377,6 +377,8 @@ aside li i {
     background: #212529;
     padding: 5px;
     border-radius: 20px;
+    height: 170px;
+    width: 100pw;
 }
 
 .gallery .project img {
@@ -384,7 +386,7 @@ aside li i {
     height: 100%;
     border-radius: 15px;
     object-fit: cover;
-    border:none;
+    border: none;
 }
 
 .contactMe {

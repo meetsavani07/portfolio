@@ -1,8 +1,8 @@
 var swiper = new Swiper(".swiper", {
-    effect: "cube",
+    effect: "flip",
     allowTouchMove:false,
     grabCursor: false,
-    cubeEffect: {
+    flipEffect: {
         shadow: true,
         slideShadows: false,
         shadowOffset: 200,
@@ -16,24 +16,12 @@ swiper.sliderMove = function (s, e) {
     function Navigate(indx) {
         for (let i of document.querySelectorAll(".Links li")) i.classList.remove("activeLink")
         Array.from(document.querySelectorAll(".Links li"))[indx].classList.add("activeLink")
-        swiper.slideTo(indx, 1000, true)// ----------------------- Scroll Reveal ---------------------------------
-ScrollReveal({
-    reset: true, 
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-ScrollReveal().reveal('.home-content h3, .heading, .serviceheading, .portfolioheading', { origin: 'top' });
-ScrollReveal().reveal('.home-image, #service-box2, #portfolio-box2, .social-media, .btn, #cfb',{ origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img, .about p, #portfolio-box1, #service-box1, #cfl', {origin: 'left'});
-ScrollReveal().reveal('.home p, .about h1, #portfolio-box3, #service-box3, #cfr' , {origin: 'rigth'});
-
-    }
-
+        swiper.slideTo(indx, 1000, true)
+}
 
 // ----------------------- Typed Js ---------------------------------
 const typed = new Typed('.multiple-text', {
-    strings: ['Web Design','Web Development','Graphic Designer'],
+    strings: ['Web Designer','Web Developer','Graphic Designer','Tester'],
     typeSpeed: 150,
     backSpeed: 150,
     backDelay: 1000,
@@ -41,19 +29,37 @@ const typed = new Typed('.multiple-text', {
 });
 
 // ----------------------- Scroll Section Active Link ---------------------------------
-let swiperSlide = document.querySelectorAll('swiper-slide');
-let navLinks = document.querySelectorAll('header Links ul li a')
+let swiperSlide = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a')
 window.onscroll = () => {
     swiperSlide.forEach(sec => {
-        let top = window.scrollX;
-        let offset = sec.offsetTop - 150;
+        let right = window.scrollY;
+        let offset = sec.offsetLeft - 150;
         let heigth = sec.offsetHeight;
         let id = sec.getAttribute('id');
-        if(top >= offset && top < offset + heigth) {
+        if(right >= offset && right < offset + heigth) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header Links ul li a[href*=' + id + ']').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
         }; 
     });
 }
+
+document.addEventListener('keydown', function(event) {
+    // Check which key is pressed
+    switch(event.key) {
+        case 'ArrowUp':
+            window.scrollBy(0, -100); // Scroll up by 100 pixels
+            break;
+        case 'ArrowDown':
+            window.scrollBy(0, 100); // Scroll down by 100 pixels
+            break;
+        case 'ArrowLeft':
+            window.scrollBy(-100, 0); // Scroll left by 100 pixels
+            break;
+        case 'ArrowRight':
+            window.scrollBy(100, 0); // Scroll right by 100 pixels
+            break;
+    }
+});
