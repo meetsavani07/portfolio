@@ -37,20 +37,24 @@ Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it 
 # WebPage Look
 
   ## Home Page
-  ![home](https://github.com/user-attachments/assets/ec05024a-d076-4bd2-bed9-7fb5b1838d52)
+  <img width="859" alt="home" src="https://github.com/user-attachments/assets/101becd9-3b05-46d9-bf9a-5a0487ee11d4">
+
 
   ## About Page
   <img width="872" alt="about" src="https://github.com/user-attachments/assets/4a900bd2-c5da-4504-b81c-236ccdcf26ba">
 
-  
+
   ## Service Page
-  
+  <img width="861" alt="srevice" src="https://github.com/user-attachments/assets/731ee86c-5e09-40fd-95e8-874edc815a76">
+
       
   ## Gallery Page
-  
+  <img width="864" alt="gallery" src="https://github.com/user-attachments/assets/7d19fa0e-4ba1-4278-ab28-aec947500eea">
+
   
   ## Contact Page
-  
+  <img width="863" alt="contact" src="https://github.com/user-attachments/assets/f228e9aa-0d06-4b65-8d71-1956e3acdf87">
+
       
       
       
