@@ -40,16 +40,16 @@ Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it 
   ![home](https://github.com/user-attachments/assets/ec05024a-d076-4bd2-bed9-7fb5b1838d52)
 
   ## About Page
-  ![about](https://github.com/user-attachments/assets/7aa70c07-8d4f-41af-b23d-64f2260b317e)
+  
   
   ## Service Page
-  ![srevice](https://github.com/user-attachments/assets/2c9b33c1-22bb-4861-a365-a285a286fb4e)
+  
       
   ## Gallery Page
-  ![gallery](https://github.com/user-attachments/assets/26788a6b-7bf4-4985-b067-7c831e62d98b)
+  
   
   ## Contact Page
-  ![contact](https://github.com/user-attachments/assets/e3190806-764c-4fdd-8aad-567b0423c47b)
+  
       
       
       
