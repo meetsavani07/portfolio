@@ -40,7 +40,8 @@ Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it 
   ![home](https://github.com/user-attachments/assets/ec05024a-d076-4bd2-bed9-7fb5b1838d52)
 
   ## About Page
-  
+  <img width="872" alt="about" src="https://github.com/user-attachments/assets/4a900bd2-c5da-4504-b81c-236ccdcf26ba">
+
   
   ## Service Page
   
