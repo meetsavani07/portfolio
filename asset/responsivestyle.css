@@ -1,0 +1,334 @@
+@media (max-width: 1218px){
+    html{
+        font-size: 100%;
+    }   
+}
+@media only screen and (max-width: 600px){
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+    .toggle-button {
+        display: block;
+    }
+    body {
+        height: auto;
+        overflow-x: hidden;
+    }
+    main {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+    }
+    aside {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+        position: relative;
+    }
+    .Links {
+        flex-direction: column;
+        margin: 0;
+        display: none;
+        width: 100%;
+    }
+    .Links.active {
+        display: flex;
+    }
+    aside li {
+        padding: 15px;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+    .mySwiper {
+        width: 100%;
+        height: auto;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+    .HomeContent {
+        padding: 20px;
+        width: 95%;
+        margin-bottom: 350px;
+    }
+    .multiple-text {
+        font-size: 1.8rem;
+    }
+    .SideImg {
+        width: 100%;
+        margin: 0;
+        right: 150px;
+    }
+    .SideImg img {
+        width: 150px;
+        height: auto;
+        margin: 0;
+        margin-top: 90px;
+        margin-left: -50px;
+    }
+    .top-right-corner {
+        right: -30px;
+        top: 50px;
+    }
+    .bottom-left-corner {
+        margin-top: 100vw;
+        left: -100px;
+        bottom: 255vw;
+    }
+    .about-me-divison {
+        flex-direction: row;
+        margin: 10px;
+    }
+    .slide-help {
+        margin-bottom: 59vh;
+    }
+    .about-me-table {
+        width: 100%;
+        display: block;
+    }
+    .about-me-table li {
+        padding: 10px;
+        width: 100%;
+    }
+    .skill-bar {
+        width: 100%;
+    }
+    .services {
+        grid-template-columns: repeat(1, 3fr);
+        display: inline;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        display: inline;
+    }
+    .contactMe{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+    }
+    .contactMe form{
+        grid-template-columns: 1fr;
+        display: inline;
+    }   
+    .social-linktext{
+        width: 400;
+        font-size: 1.3rem;
+    }
+    form h2 .SocialLinks{
+        width: 240px;
+        margin-top: 10px;
+    } 
+    .contactMe form input,
+    .contactMe form textarea{
+        margin: 10px 10px;
+        width: 10;
+    }
+    .contactMe form input:focus,
+    .contactMe form textarea:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+    .contactMe button {
+        width: 50%;
+        margin: 10px 55px;
+    }
+    .contactMe button:hover {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+    .copyright {
+        margin-left: 0;
+        text-align: center;
+    }
+    footer {
+        margin-bottom: 60vh;
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 480px){
+    .HomeContent {
+        padding: 20px;
+        width: 95%;
+        margin-bottom: 85vw;
+    }
+    .multiple-text {
+        font-size: 1.5rem;
+    }
+    .SideImg {
+        width: 100%;
+        margin: 0;
+        right: 100px;
+    }
+    .SideImg img {
+        width: 120px;
+        height: auto;
+        margin: 0;
+        margin-top: 80px;
+        margin-left: -100px;
+    }
+    .top-right-corner {
+        right: 0px;
+        top: 40px;
+    }
+    .bottom-left-corner {
+        margin-top: 80vw;
+        left: -150px;
+        bottom: 260vw;
+    }
+    .about-me-divison {
+        flex-direction: row;
+        margin: 5px;
+    }
+    .slide-help {
+        margin-bottom: 135vw;
+    }
+    .about-me-table {
+        width: 100%;
+        display: block;
+    }
+    .about-me-table li {
+        padding: 5px;
+        width: 100%;
+    }
+    .skill-bar { width: 100%; }
+    .services {
+        grid-template-columns: repeat(1, 2fr);
+        display: inline;    
+    }
+    .gallery { 
+        grid-template-columns: repeat(1, 1fr); 
+        display: inline;
+    }
+    .contactMe {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+    .contactinfo{
+        grid-template-columns: 1fr;
+        text-align: left;
+        margin: 5px;
+    }
+    .formdetails{
+        display: table-row;
+    }
+    .contactMe form{
+        grid-template-columns: 1fr;
+        display: inline;
+    }
+    .social-linktext{
+        width: 450;
+        font-size: 1.3  rem;
+    }
+    .social-linktext{
+        width: 400;
+        font-size: 1.3rem;
+    }
+    form h2 .SocialLinks{
+        width: 240px;
+        margin-top: 10px;
+    } 
+    .contactMe form input,
+    .contactMe form textarea{
+        margin: 10px 10px;
+        width: 10;
+    }
+}
+
+
+@media only screen and (max-width: 300px){
+    .HomeContent {
+        padding: 20px;
+        width: 95%;
+        margin-bottom: 85vw;
+    }
+    .multiple-text {
+        font-size: 1.5rem;
+    }
+    .SideImg {
+        width: 100%;
+        margin: 0;
+        right: 100px;
+    }
+    .SideImg img {
+        width: 120px;
+        height: auto;
+        margin: 0;
+        margin-top: 80px;
+        margin-left: -100px;
+    }
+    .top-right-corner {
+        right: 0px;
+        top: 40px;
+    }
+    .bottom-left-corner {
+        margin-top: 80vw;
+        left: -150px;
+        bottom: 260vw;
+    }
+    .about-me-divison {
+        flex-direction: row;
+        margin: 5px;
+    }
+    .slide-help {
+        margin-bottom: 135vw;
+    }
+    .about-me-table {
+        width: 100%;
+        display: block;
+    }
+    .about-me-table li {
+        padding: 5px;
+        width: 100%;
+    }
+    .skill-bar { width: 100%; }
+    .services {
+        grid-template-columns: repeat(1, 2fr);
+        display: inline;    
+    }
+    .gallery { 
+        grid-template-columns: repeat(1, 1fr); 
+        display: inline;
+    }
+    .contactMe {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+    .contactinfo{
+        grid-template-columns: 1fr;
+        text-align: left;
+        margin: 5px;
+    }
+    .formdetails{
+        display: table-row;
+    }
+    .contactMe form{
+        grid-template-columns: 1fr;
+        display: inline;
+    }
+    .social-linktext{
+        width: 450;
+        font-size: 1.3  rem;
+    }
+    .social-linktext{
+        width: 400;
+        font-size: 1.3rem;
+    }
+    form h2 .SocialLinks{
+        width: 240px;
+        margin-top: 10px;
+    } 
+    .contactMe form input,
+    .contactMe form textarea{
+        margin: 10px 10px;
+        width: 10;
+    }
+}
