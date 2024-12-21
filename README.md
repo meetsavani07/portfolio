@@ -45,7 +45,7 @@ Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it 
 
 
   ## Service Page
-  <img width="861" alt="srevice" src="https://github.com/user-attachments/assets/731ee86c-5e09-40fd-95e8-874edc815a76">
+  
 
       
   ## Gallery Page
