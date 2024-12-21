@@ -45,7 +45,8 @@ Open [http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html) to it 
 
 
   ## Service Page
- <img width="872" alt="service" scr="https://github.com/user-attachments/assets/a87ac592-5d13-417c-8f89-1d11732a3dab)">
+[service](https://github.com/user-attachments/assets/80f6faca-f0d4-4896-81f4-114615749999)
+
 
 
       
