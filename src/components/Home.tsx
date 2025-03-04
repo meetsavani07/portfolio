@@ -112,12 +112,28 @@ const Home: React.FC = () => {
           Get in touch <ArrowRight size={20} />
         </Link>
         <div className="flex gap-4">
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><Github size={24} /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={24} /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter size={24} /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><MailCheck size={24} /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><MessageSquareText size={24}/></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><QrCode size={24}/></a>
+          <a href="https://github.com/meetsavani07" className="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <Github size={24} />
+          </a>
+          
+          <a href="https://www.linkedin.com/in/meet-savani-30088931b/" className="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <Linkedin size={24} />
+          </a>
+          
+          <a href="https://x.com/meetsavani07" className="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <Twitter size={24} />
+            </a>
+          
+          <a href="mailto:savanimeet11@gmail.com" className="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <MailCheck size={24} />
+          </a>
+          
+          <a href="https://wa.me/9824357565" className="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <MessageSquareText size={24}/>
+          </a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <QrCode size={24}/>
+          </a>
         </div>
       </div>
     </motion.div>
