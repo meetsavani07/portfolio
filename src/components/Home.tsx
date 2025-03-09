@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import homeimage from "../assets/Image/home-main.svg";
 import Type from "../assets/type";
 import myimage from "../assets/Image/avatar.svg";
-import { ArrowRight, Github, Linkedin, Twitter, MailCheck, MessageSquareText, QrCode } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Twitter, MailCheck, MessageSquareText } from "lucide-react";
 import { Link } from "react-router-dom";
 import TiltedCard from '../assets/TiltedCard ';
-
 
 const Home: React.FC = () => {
   return (
@@ -97,10 +96,11 @@ const Home: React.FC = () => {
         and also in areas related to <span className="italic text-purple-400">Backend.</span>
       </p>
       <p className="mt-5 text-base sm:text-lg">
-        Whenever possible, I also apply my passion for developing products with
-        <span className="text-purple-400"> Node.js </span> and
-        <span className="italic text-purple-400"> Modern JavaScript Frameworks </span>
-        like <span className="text-purple-400">React.js and Next.js</span>
+        I am passionate about crafting intuitive and engaging user experiences through 
+        <span className="text-purple-400"> modern UI/UX principles</span> and 
+        <span className="italic text-purple-400"> cutting-edge frontend technologies</span>.  
+        I specialize in building seamless, responsive interfaces using 
+        <span className="text-purple-400"> React.js, Next.js, and other modern frameworks</span>.
       </p>
 
       {/* Buttons and Links */}
@@ -130,9 +130,6 @@ const Home: React.FC = () => {
           
           <a href="https://wa.me/9824357565" className="text-gray-400 hover:text-white transition-colors" target="_blank">
             <MessageSquareText size={24}/>
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors" target="_blank">
-            <QrCode size={24}/>
           </a>
         </div>
       </div>
