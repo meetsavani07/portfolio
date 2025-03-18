@@ -56,7 +56,7 @@ const Services = () => {
       title: 'Backend Development',
       description:
         'Robust and scalable server-side solutions for your applications.',
-      technologies: ['Node.js', 'Express.js', 'MongoDB'],
+      technologies: ['Node.js', 'Express.js', 'MongoDB','Supabase'],
     },
     {
       icon: <Settings size={24} />,
