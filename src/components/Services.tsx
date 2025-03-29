@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Globe, PenTool, Database, Layout, Settings } from 'lucide-react';
 import { useState } from 'react';
+import ScrollAnimation from './ScrollAnimation';
 
 const Services = () => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
@@ -81,10 +82,9 @@ const Services = () => {
       className="min-h-screen pt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
+        <ScrollAnimation
+          from={{ opacity: 0, y: 30 }}
+          to={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Services</h2>
@@ -95,24 +95,26 @@ const Services = () => {
           <p className="text-sm text-purple-400 mt-4">
             Click on any card to see technologies
           </p>
-        </motion.div>
+        </ScrollAnimation>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <ScrollAnimation
               key={service.title}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 + index * 0.1 }}
+              from={{ opacity: 0, y: 50 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={[0, 0.5]}
+              springConfig={{ stiffness: 70, damping: 15 }}
               className="relative h-[330px] cursor-pointer perspective-1000"
-              onClick={() => toggleCard(index)}
             >
-              <motion.div
+              <div
+                onClick={() => toggleCard(index)}
                 className="w-full h-full relative transform-style-3d transition-transform duration-700"
-                initial={false}
-                animate={{ rotateY: flippedCards.includes(index) ? 180 : 0 }}
-                transition={{ duration: 0.6 }}
-                style={{ transformStyle: 'preserve-3d' }}
+                style={{
+                  transform: flippedCards.includes(index)
+                    ? 'rotateY(180deg)'
+                    : 'rotateY(0deg)',
+                }}
               >
                 {/* Front of card */}
                 <div className="absolute w-full h-full bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm hover:bg-slate-700/50 transition-colors group backface-hidden flex flex-col">
@@ -179,8 +181,8 @@ const Services = () => {
                     </motion.span>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>

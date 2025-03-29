@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import ScrollAnimation from './ScrollAnimation';
 
 const Contact = () => {
   return (
@@ -10,10 +11,9 @@ const Contact = () => {
       className="min-h-screen pt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
+        <ScrollAnimation
+          from={{ opacity: 0, y: 30 }}
+          to={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
@@ -21,13 +21,13 @@ const Contact = () => {
             Have a project in mind? Let's discuss how we can work together to
             bring your ideas to life.
           </p>
-        </motion.div>
+        </ScrollAnimation>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
+          <ScrollAnimation
+            from={{ opacity: 0, x: -50 }}
+            to={{ opacity: 1, x: 0 }}
+            threshold={[0, 0.5]}
           >
             <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm">
               <h3 className="text-2xl font-semibold mb-6">
@@ -63,12 +63,12 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </ScrollAnimation>
 
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
+          <ScrollAnimation
+            from={{ opacity: 0, x: 50 }}
+            to={{ opacity: 1, x: 0 }}
+            threshold={[0, 0.5]}
           >
             <form
               className="space-y-6"
@@ -133,7 +133,7 @@ const Contact = () => {
                 Send Message <Send size={20} />
               </button>
             </form>
-          </motion.div>
+          </ScrollAnimation>
         </div>
       </div>
     </motion.div>
