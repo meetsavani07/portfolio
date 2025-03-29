@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Download, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react';
-import ScrollAnimation from './ScrollAnimation';
 
 const Resume = () => {
   const skills = [
@@ -20,9 +19,27 @@ const Resume = () => {
       description:
         'Led the frontend development team in creating modern web applications using React and TypeScript.',
     },
+    // {
+    //   title: 'Full Stack Developer',
+    //   company: 'Digital Innovations',
+    //   period: '2020 - 2022',
+    //   description: 'Developed and maintained full-stack applications using the MERN stack.',
+    // },
+    // {
+    //   title: 'UI/UX Designer',
+    //   company: 'Creative Agency',
+    //   period: '2018 - 2020',
+    //   description: 'Designed user interfaces and experiences for web and mobile applications.',
+    // },
   ];
 
   const education = [
+    // {
+    //   degree: 'Master of Computer Science',
+    //   school: 'Tech University',
+    //   period: '2016 - 2018',
+    //   description: 'Specialized in Software Engineering and Human-Computer Interaction.',
+    // },
     {
       degree: 'Bachelor of Computer Application',
       school: 'Bhagawan Mahavir University',
@@ -48,30 +65,33 @@ const Resume = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-16">
-          <ScrollAnimation
-            from={{ opacity: 0, y: 30 }}
-            to={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
           >
             <h2 className="text-4xl font-bold mb-4">Resume</h2>
-            <p className="text-gray-400">My professional journey and skillset</p>
-          </ScrollAnimation>
-          <ScrollAnimation
-            from={{ opacity: 0, y: 30 }}
-            to={{ opacity: 1, y: 0 }}
+            <p className="text-gray-400">
+              My professional journey and skillset
+            </p>
+          </motion.div>
+          <motion.button
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-colors whitespace-nowrap"
           >
-            <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-colors whitespace-nowrap">
-              Download CV <Download size={20} />
-            </button>
-          </ScrollAnimation>
+            Download CV <Download size={20} />
+          </motion.button>
         </div>
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-12 gap-8">
           {/* Left Column - Skills */}
-          <ScrollAnimation
-            from={{ opacity: 0, x: -50 }}
-            to={{ opacity: 1, x: 0 }}
-            threshold={[0, 0.5]}
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
             className="lg:col-span-4 space-y-8"
           >
             {/* Technical Skills */}
@@ -108,26 +128,23 @@ const Resume = () => {
               </div>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <ScrollAnimation
+                  <div
                     key={index}
-                    from={{ opacity: 0, y: 20 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={[0, 0.5]}
                     className="p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700 transition-colors"
                   >
                     <p className="font-medium">{cert.name}</p>
                     <p className="text-sm text-purple-400 mt-1">{cert.date}</p>
-                  </ScrollAnimation>
+                  </div>
                 ))}
               </div>
             </div>
-          </ScrollAnimation>
+          </motion.div>
 
           {/* Right Column - Experience & Education */}
-          <ScrollAnimation
-            from={{ opacity: 0, x: 50 }}
-            to={{ opacity: 1, x: 0 }}
-            threshold={[0, 0.5]}
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
             className="lg:col-span-8 space-y-8"
           >
             {/* Experience */}
@@ -138,11 +155,8 @@ const Resume = () => {
               </div>
               <div className="space-y-12">
                 {experience.map((job, index) => (
-                  <ScrollAnimation
+                  <div
                     key={index}
-                    from={{ opacity: 0, y: 20 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={[0, 0.5]}
                     className="relative pl-8 border-l-2 border-purple-600/30"
                   >
                     <div className="absolute w-4 h-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full -left-[9px] top-2" />
@@ -152,7 +166,7 @@ const Resume = () => {
                       {job.company} | {job.period}
                     </p>
                     <p className="text-gray-400">{job.description}</p>
-                  </ScrollAnimation>
+                  </div>
                 ))}
               </div>
             </div>
@@ -165,11 +179,8 @@ const Resume = () => {
               </div>
               <div className="space-y-12">
                 {education.map((edu, index) => (
-                  <ScrollAnimation
+                  <div
                     key={index}
-                    from={{ opacity: 0, y: 20 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={[0, 0.5]}
                     className="relative pl-8 border-l-2 border-purple-600/30"
                   >
                     <div className="absolute w-4 h-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full -left-[9px] top-2" />
@@ -179,11 +190,11 @@ const Resume = () => {
                       {edu.school} | {edu.period}
                     </p>
                     <p className="text-gray-400">{edu.description}</p>
-                  </ScrollAnimation>
+                  </div>
                 ))}
               </div>
             </div>
-          </ScrollAnimation>
+          </motion.div>
         </div>
       </div>
     </motion.div>

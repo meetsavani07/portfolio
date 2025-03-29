@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import none from '../assets/Gallery-Image/none.png';
-import ScrollAnimation from './ScrollAnimation';
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
@@ -38,8 +37,12 @@ const Gallery = () => {
     },
   ];
 
-  const categories = ['all', 'Web Development', 'UI/UX Design'];
-
+  const categories = [
+    'all',
+    'Web Development',
+    'UI/UX Design',
+  ];
+  
   const filteredProjects =
     filter === 'all'
       ? projects
@@ -53,9 +56,10 @@ const Gallery = () => {
       className="min-h-screen pt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <ScrollAnimation
-          from={{ opacity: 0, y: 30 }}
-          to={{ opacity: 1, y: 0 }}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Project Gallery</h2>
@@ -79,7 +83,7 @@ const Gallery = () => {
               </button>
             ))}
           </div>
-        </ScrollAnimation>
+        </motion.div>
 
         <AnimatePresence mode="wait">
           <motion.div
@@ -91,17 +95,16 @@ const Gallery = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredProjects.map((project, index) => (
-              <ScrollAnimation
+              <motion.div
                 key={project.title}
-                from={{ opacity: 0, y: 50 }}
-                to={{ opacity: 1, y: 0 }}
-                threshold={[0, 0.5]}
-                springConfig={{ stiffness: 70, damping: 15 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-xl bg-slate-800/50"
               >
-                <a
-                  href={project.link}
-                  target="_blank"
+                <a 
+                  href={project.link} 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="block"
                 >
@@ -136,7 +139,7 @@ const Gallery = () => {
                     </div>
                   </div>
                 </a>
-              </ScrollAnimation>
+              </motion.div>
             ))}
           </motion.div>
         </AnimatePresence>
