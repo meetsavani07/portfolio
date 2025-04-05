@@ -2,6 +2,18 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+919824357565';
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:savanimeet11@gmail.com';
+  };
+
+  const handleLocationClick = () => {
+    window.open('https://maps.google.com/?q=Surat,Gujarat,India', '_blank');
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -34,7 +46,10 @@ const Contact = () => {
                 Contact Information
               </h3>
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+                <div 
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-colors"
+                  onClick={handleEmailClick}
+                >
                   <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400">
                     <Mail size={24} />
                   </div>
@@ -43,7 +58,10 @@ const Contact = () => {
                     <p className="font-medium">savanimeet11@gmail.com</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div 
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-colors"
+                  onClick={handlePhoneClick}
+                >
                   <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400">
                     <Phone size={24} />
                   </div>
@@ -52,7 +70,10 @@ const Contact = () => {
                     <p className="font-medium">+91 9824357565</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div 
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-colors"
+                  onClick={handleLocationClick}
+                >
                   <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400">
                     <MapPin size={24} />
                   </div>
