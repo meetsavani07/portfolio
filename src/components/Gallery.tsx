@@ -1,45 +1,58 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import none from '../assets/Gallery-Image/none.png';
+// import none from '../assets/Gallery-Image/none.png';
+import HMSMedicare from '../assets/Gallery-Image/HMS-Medicare.png';
+import MeetSavani from '../assets/Gallery-Image/Meet-Savani.png';
+import Freshmart from '../assets/Gallery-Image/Fresh-Mart.png';
+import Mindmap from '../assets/Gallery-Image/Mind-Map.png';
+import WorldWatch from '../assets/Gallery-Image/WorldWatch.png';
+
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
 
   const projects = [
     {
-      title: 'E-commerce Platform',
-      category: 'Web Development',
-      image: none,
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      link: 'https://meet-savani.netlify.app/',
-    },
-    {
       title: 'Portfolio Website',
-      category: 'UI/UX Design',
-      image: none,
+      category: 'Frontend Development',
+      image: MeetSavani,
       technologies: ['Figma', 'React', 'Tailwind'],
       link: 'https://meet-savani.netlify.app/',
     },
     {
-      title: 'Social Media Dashboard',
-      category: 'Web Development',
-      image: none,
-      technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-      link: 'https://meet-savani.netlify.app/',
+      title: 'Hospital-Management-System',
+      category: 'Frontend Development',
+      image: HMSMedicare,
+      technologies: ['Figma', 'React', 'Vite', 'Tailwind CSS'],
+      link: 'https://hms-medicare.netlify.app/',
     },
     {
-      title: 'Restaurant Website',
-      category: 'Web Development',
-      image: none,
-      technologies: ['Next.js', 'Prisma', 'PostgreSQL'],
-      link: 'https://meet-savani.netlify.app/',
+      title: 'Grosry Store',
+      category: 'Frontend Development',
+      image: Freshmart,
+      technologies: ['Vite.js', 'framer-motion', ],
+      link: 'https://freshmart-grocerystore.netlify.app/',
+    },
+    {
+      title: 'Mind Map',
+      category: 'Frontend Development',
+      image: Mindmap,
+      technologies: ['@reactflow/node-resizer', 'Prisma', 'y-websocket',],
+      link: 'https://mind-map-creater.netlify.app/',
+    },
+    {
+      title: 'World Watch',
+      category: 'Frontend Development',
+      image: WorldWatch,
+      technologies: ['Next.js', 'Prisma', 'zustand', 'react-leaflet'],
+      link: 'https://worldwatch-news.netlify.app/',
     },
   ];
 
   const categories = [
     'all',
-    'Web Development',
+    'Frontend Development',
     'UI/UX Design',
   ];
   
