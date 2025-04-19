@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MessageSquareText, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
   const handlePhoneClick = () => {
-    window.location.href = 'tel:+919824357565';
+    window.location.href = 'https://wa.me/9824357565';
   };
 
   const handleEmailClick = () => {
@@ -33,6 +33,10 @@ const Contact = () => {
             Have a project in mind? Let's discuss how we can work together to
             bring your ideas to life.
           </p>
+          <b className="text-gray-400 max-w-2xl mx-auto">
+          If you want to contact me, click the left side button and if you want to send an email,
+          then fill up the form.
+          </b>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -55,7 +59,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-400">Email</p>
-                    <p className="font-medium">savanimeet11@gmail.com</p>
+                    {/* <p className="font-medium">savanimeet11@gmail.com</p> */}
                   </div>
                 </div>
                 <div 
@@ -63,11 +67,11 @@ const Contact = () => {
                   onClick={handlePhoneClick}
                 >
                   <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400">
-                    <Phone size={24} />
+                    <MessageSquareText size={24} />
                   </div>
                   <div>
                     <p className="text-gray-400">Phone</p>
-                    <p className="font-medium">+91 9824357565</p>
+                    {/* <p className="font-medium">+91 **********</p> */}
                   </div>
                 </div>
                 <div 
@@ -79,7 +83,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-400">Location</p>
-                    <p className="font-medium">Surat, Gujarat, India</p>
+                    {/* <p className="font-medium">Surat, Gujarat, India</p> */}
                   </div>
                 </div>
               </div>

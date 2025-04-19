@@ -18,21 +18,10 @@ const Services = () => {
       title: 'UI/UX Design',
       description:
         'Beautiful and intuitive user interfaces that enhance user experience.',
-      technologies: ['Figma', 'Adobe XD', 'WIX'],
-    },
-    {
-      icon: <Globe size={24} />,
-      stages: 'Learning in Progress',
-      title: 'Web Development',
-      description:
-        'Custom websites built with modern technologies and best practices.',
       technologies: [
-        'HTML5',
-        'CSS3',
-        'JavaScript',
-        'TypeScript',
-        'React.js',
-        'Next.js',
+        'Figma', 
+        'Adobe XD', 
+        'WIX'
       ],
     },
     {
@@ -56,7 +45,27 @@ const Services = () => {
       title: 'Backend Development',
       description:
         'Robust and scalable server-side solutions for your applications.',
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Supabase'],
+      technologies: [
+        'Node.js', 
+        'Express.js', 
+        'MongoDB', 
+        'Supabase'
+      ],
+    },
+    {
+      icon: <Globe size={24} />,
+      stages: 'Learning in Progress',
+      title: 'Web Development',
+      description:
+        'Custom websites built with modern technologies and best practices.',
+      technologies: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'TypeScript',
+        'React.js',
+        'Next.js',
+      ],
     },
     {
       icon: <Settings size={24} />,
