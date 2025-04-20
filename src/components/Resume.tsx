@@ -3,12 +3,12 @@ import { Download, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react';
 
 const Resume = () => {
   const skills = [
-    { name: 'React/Next.js', level: 90 },
-    { name: 'TypeScript', level: 85 },
-    { name: 'Node.js', level: 80 },
-    { name: 'UI/UX Design', level: 75 },
-    { name: 'Python', level: 70 },
-    { name: 'DevOps', level: 65 },
+    'React/Next.js',
+    'TypeScript',
+    'Node.js',
+    'UI/UX Design',
+    'Python',
+    'WIX'
   ];
 
   const experience = [
@@ -19,27 +19,9 @@ const Resume = () => {
       description:
         'Led the frontend development team in creating modern web applications using React and TypeScript.',
     },
-    // {
-    //   title: 'Full Stack Developer',
-    //   company: 'Digital Innovations',
-    //   period: '2020 - 2022',
-    //   description: 'Developed and maintained full-stack applications using the MERN stack.',
-    // },
-    // {
-    //   title: 'UI/UX Designer',
-    //   company: 'Creative Agency',
-    //   period: '2018 - 2020',
-    //   description: 'Designed user interfaces and experiences for web and mobile applications.',
-    // },
   ];
 
   const education = [
-    // {
-    //   degree: 'Master of Computer Science',
-    //   school: 'Tech University',
-    //   period: '2016 - 2018',
-    //   description: 'Specialized in Software Engineering and Human-Computer Interaction.',
-    // },
     {
       degree: 'Bachelor of Computer Application',
       school: 'Bhagawan Mahavir University',
@@ -100,21 +82,13 @@ const Resume = () => {
                 <Code2 className="text-purple-400" size={24} />
                 <h3 className="text-2xl font-semibold">Technical Skills</h3>
               </div>
-              <div className="space-y-6">
+              <div className="grid gap-4">
                 {skills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-purple-400">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="h-full bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"
-                      />
-                    </div>
+                  <div
+                    key={skill}
+                    className="p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700 transition-colors"
+                  >
+                    <span className="text-gray-300">{skill}</span>
                   </div>
                 ))}
               </div>
