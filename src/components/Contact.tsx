@@ -29,11 +29,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto font-mono">
             Have a project in mind? Let's discuss how we can work together to
             bring your ideas to life.
           </p>
-          <b className="text-gray-400 max-w-2xl mx-auto">
+          <b className="text-gray-400 max-w-2xl mx-auto font-mono">
             If you want to contact me, click the left side button and if you want to send an email,
             then fill up the form.
           </b>
@@ -47,7 +47,7 @@ const Contact = () => {
             whileHover={{ scale: 1.02 }}
             className="transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
           >
-            <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm">
+            <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm font-mono">
               <h3 className="text-2xl font-semibold mb-6 text-purple-400">
                 Contact Information
               </h3>

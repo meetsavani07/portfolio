@@ -97,7 +97,7 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Services</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto font-mono">
             Comprehensive solutions tailored to your needs. From concept to
             deployment, I deliver quality results that exceed expectations.
           </p>
@@ -147,7 +147,7 @@ const Services = () => {
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-400 flex-grow group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-gray-400 flex-grow group-hover:text-gray-300 transition-colors duration-300 font-mono">
                     {service.description}
                   </p>
                   <div className="text-sm text-purple-400 mt-4 flex items-center gap-2">

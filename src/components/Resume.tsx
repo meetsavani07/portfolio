@@ -3,12 +3,12 @@ import { Download, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react';
 
 const Resume = () => {
   const skills = [
-    { name: 'React/Next.js', icon: '/src/assets/Image/react.png' },
-    { name: 'TypeScript', icon: '/src/assets/Image/typescript.png' },
-    { name: 'Node.js', icon: '/src/assets/Image/nodejs.png' },
-    { name: 'UI/UX Design', icon: '/src/assets/Image/figma.png' },
-    { name: 'Python', icon: '/src/assets/Image/python.png' },
-    { name: 'DevOps', icon: '/src/assets/Image/docker.png' },
+    { name: 'React/Next.js', icon: '/src/assets/Image/react.svg' },
+    { name: 'TypeScript', icon: '/src/assets/Image/typescript.svg' },
+    { name: 'Node.js', icon: '/src/assets/Image/nodejs.svg' },
+    { name: 'UI/UX Design', icon: '/src/assets/Image/figma.svg' },
+    { name: 'Python', icon: '/src/assets/Image/python.svg' },
+    
   ];
 
   const experience = [
@@ -53,7 +53,7 @@ const Resume = () => {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-4xl font-bold mb-4">Resume</h2>
-            <p className="text-gray-400">
+            <p className="text-gray-400 font-mono">
               My professional journey and skillset
             </p>
           </motion.div>
@@ -76,7 +76,7 @@ const Resume = () => {
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="lg:col-span-4 space-y-8"
+            className="lg:col-span-4 space-y-8 font-mono"
           >
             {/* Technical Skills */}
             <motion.div 
@@ -86,7 +86,7 @@ const Resume = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Code2 className="text-purple-400" size={24} />
-                <h3 className="text-2xl font-semibold">Technical Skills</h3>
+                <h3 className="text-3xl font-semibold">Technical Skills</h3>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {skills.map((skill) => (
@@ -99,7 +99,7 @@ const Resume = () => {
                     <img 
                       src={skill.icon} 
                       alt={skill.name} 
-                      className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+                      className="w-12 h-12 ml-7 object-contain group-hover:scale-110 transition-transform duration-300"
                     />
                     <span className="text-sm text-center mt-3 block group-hover:text-purple-400 transition-colors duration-300">
                       {skill.name}
@@ -113,7 +113,7 @@ const Resume = () => {
             <motion.div 
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
+              className="bg-slate-800/50 font-mono p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-6">
                 <Award className="text-purple-400" size={24} />
@@ -149,7 +149,7 @@ const Resume = () => {
             <motion.div 
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
-              className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
+              className="bg-slate-800/50 font-mono p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-8">
                 <Briefcase className="text-purple-400" size={24} />
@@ -182,7 +182,7 @@ const Resume = () => {
             <motion.div 
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
-              className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
+              className="bg-slate-800/50 font-mono p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-8">
                 <GraduationCap className="text-purple-400" size={24} />

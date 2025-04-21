@@ -34,8 +34,8 @@ const About = () => {
           transition={{ delay: 0.2 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-black mb-4">About Me</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto font-mono">
             A passionate developer with a keen eye for design and a commitment
             to creating exceptional digital experiences that make a difference.
           </p>
@@ -54,8 +54,8 @@ const About = () => {
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4 text-purple-400 group-hover:bg-purple-600/30 group-hover:scale-110 transition-all duration-300">
                 {skill.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">{skill.title}</h3>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{skill.description}</p>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300 ">{skill.title}</h3>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 font-mono">{skill.description}</p>
             </motion.div>
           ))}
         </div>
@@ -69,7 +69,7 @@ const About = () => {
         >
           <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm">
             <h3 className="text-2xl font-bold mb-4 text-purple-400">My Journey</h3>
-            <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors duration-300">
+            <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors duration-300 font-mono">
               As a passionate and motivated fresher in web development, I am
               eager to apply my skills to create user-centric digital solutions.
               I am enthusiastic about learning and contributing to diverse

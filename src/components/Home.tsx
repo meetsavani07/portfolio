@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import homeimage from "../assets/Image/home-main.svg";
-import Type from "../assets/type";
+import Type from "../assets/code/type";
 import { ArrowRight, Github, Linkedin, Twitter, MailCheck, MessageSquareText } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <h1 className="text-3xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-5xl font-black mb-6">
                 <span className="text-4xl bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                   Hi There!
                 </span>
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                   <Type />
                 </div>
               </h1>
-              <p className="text-gray-400 text-lg mb-8">
+              <p className="text-gray-400 text-lg mb-8 font-mono">
                 Crafting digital experiences that blend creativity with technical
                 excellence. Let's bring your vision to life.
               </p>
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
               MYSELF
             </h1>
             
-            <div className="space-y-6 text-gray-300">
+            <div className="space-y-6 text-gray-300 font-mono">
               <p>
                 I'm a passionate frontend developer with a creative mindset and a dedication to crafting exceptional user experiences. 🚀
               </p>

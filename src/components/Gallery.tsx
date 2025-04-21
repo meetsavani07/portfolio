@@ -70,7 +70,7 @@ const Gallery = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Project Gallery</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-gray-400 max-w-2xl mx-auto mb-8 font-mono">
             A showcase of my recent projects and creative work. Each project
             represents a unique challenge and innovative solution.
           </p>
@@ -121,7 +121,7 @@ const Gallery = () => {
                   <div className="aspect-w-16 aspect-h-9">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      // alt={project.title}
                       className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
@@ -136,7 +136,7 @@ const Gallery = () => {
                         </p>
                         <ExternalLink className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300" size={20} />
                       </div>
-                      <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                      <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors duration-300 font-mono">
                         {project.title}
                       </h3>
                       <div className="flex flex-wrap gap-2">
