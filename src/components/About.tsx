@@ -48,13 +48,14 @@ const About = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm"
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group"
             >
-              <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+              <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4 text-purple-400 group-hover:bg-purple-600/30 group-hover:scale-110 transition-all duration-300">
                 {skill.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
-              <p className="text-gray-400">{skill.description}</p>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">{skill.title}</h3>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{skill.description}</p>
             </motion.div>
           ))}
         </div>
@@ -63,31 +64,34 @@ const About = () => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-20"
+          whileHover={{ scale: 1.02 }}
+          className="mt-20 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
         >
           <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold mb-4">My Journey</h3>
-            <p className="text-gray-400 mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-purple-400">My Journey</h3>
+            <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors duration-300">
               As a passionate and motivated fresher in web development, I am
               eager to apply my skills to create user-centric digital solutions.
               I am enthusiastic about learning and contributing to diverse
               projects that enhance user experiences.
             </p>
             <div className="grid md:grid-cols-3 gap-4 text-center">
-              <div className="p-4">
-                <div className="text-3xl font-bold text-purple-400 mb-2">
+              <motion.div 
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="p-4 bg-slate-700/50 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+              >
+                <div className="text-3xl font-bold text-purple-400 mb-2 transition-colors duration-300">
                   Fresher
                 </div>
                 <div className="text-gray-400">Years Experience</div>
-              </div>
-              <div className="p-4">
-                <div className="text-3xl font-bold text-purple-400 mb-2">7</div>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="p-4 bg-slate-700/50 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+              >
+                <div className="text-3xl font-bold text-purple-400 mb-2 transition-colors duration-300">7</div>
                 <div className="text-gray-400">Projects Completed</div>
-              </div>
-              {/* <div className="p-4">
-                <div className="text-3xl font-bold text-purple-400 mb-2"></div>
-                <div className="text-gray-400">Happy Clients</div>
-              </div> */}
+              </motion.div>
             </div>
           </div>
         </motion.div>

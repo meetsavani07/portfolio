@@ -34,8 +34,8 @@ const Contact = () => {
             bring your ideas to life.
           </p>
           <b className="text-gray-400 max-w-2xl mx-auto">
-          If you want to contact me, click the left side button and if you want to send an email,
-          then fill up the form.
+            If you want to contact me, click the left side button and if you want to send an email,
+            then fill up the form.
           </b>
         </motion.div>
 
@@ -44,48 +44,53 @@ const Contact = () => {
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
+            whileHover={{ scale: 1.02 }}
+            className="transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
           >
             <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm">
-              <h3 className="text-2xl font-semibold mb-6">
+              <h3 className="text-2xl font-semibold mb-6 text-purple-400">
                 Contact Information
               </h3>
               <div className="space-y-6">
-                <div 
-                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-colors"
+                <motion.div 
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
                   onClick={handleEmailClick}
+                  whileHover={{ x: 10, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400">
+                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-600/30 transition-all duration-300">
                     <Mail size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400">Email</p>
-                    {/* <p className="font-medium">savanimeet11@gmail.com</p> */}
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">Email</p>
                   </div>
-                </div>
-                <div 
-                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-colors"
+                </motion.div>
+                <motion.div 
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
                   onClick={handlePhoneClick}
+                  whileHover={{ x: 10, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400">
+                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-600/30 transition-all duration-300">
                     <MessageSquareText size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400">Phone</p>
-                    {/* <p className="font-medium">+91 **********</p> */}
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">Phone</p>
                   </div>
-                </div>
-                <div 
-                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-colors"
+                </motion.div>
+                <motion.div 
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
                   onClick={handleLocationClick}
+                  whileHover={{ x: 10, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400">
+                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-600/30 transition-all duration-300">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400">Location</p>
-                    {/* <p className="font-medium">Surat, Gujarat, India</p> */}
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">Location</p>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -94,6 +99,8 @@ const Contact = () => {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
+            whileHover={{ scale: 1.01 }}
+            className="transition-all duration-300"
           >
             <form
               className="space-y-6"
@@ -101,7 +108,10 @@ const Contact = () => {
               method="POST"
             >
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  className="transition-all duration-300"
+                >
                   <label className="block text-sm font-medium text-gray-400 mb-2">
                     First Name
                   </label>
@@ -112,51 +122,62 @@ const Contact = () => {
                   />
                   <input
                     type="text"
-                    className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
                     name="Full_Name"
                     id="First-Name"
                   />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  className="transition-all duration-300"
+                >
                   <label className="block text-sm font-medium text-gray-400 mb-2">
                     Last Name
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
                     name="Last_Name"
                     id="Last-Name"
                   />
-                </div>
+                </motion.div>
               </div>
-              <div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="transition-all duration-300"
+              >
                 <label className="block text-sm font-medium text-gray-400 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
                   name="Email-ID"
                   id="Email"
                 />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="transition-all duration-300"
+              >
                 <label className="block text-sm font-medium text-gray-400 mb-2">
                   Message
                 </label>
                 <textarea
                   rows={6}
-                  className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  className="w-full px-4 py-3 bg-slate-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
                   name="Your Message"
-                  id="Meassage"
+                  id="Message"
                 ></textarea>
-              </div>
-              <button
+              </motion.div>
+              <motion.button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 transition-colors"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
               >
                 Send Message <Send size={20} />
-              </button>
+              </motion.button>
             </form>
           </motion.div>
         </div>

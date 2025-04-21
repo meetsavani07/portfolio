@@ -60,7 +60,7 @@ const Services = () => {
         'Custom websites built with modern technologies and best practices.',
       technologies: [
         'HTML5',
-        'CSS3',
+        'CSS5',
         'JavaScript',
         'TypeScript',
         'React.js',
@@ -113,7 +113,8 @@ const Services = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className="relative h-[330px] cursor-pointer perspective-1000"
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="relative h-[330px] cursor-pointer perspective-1000 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
               onClick={() => toggleCard(index)}
             >
               <motion.div
@@ -124,29 +125,29 @@ const Services = () => {
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 {/* Front of card */}
-                <div className="absolute w-full h-full bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm hover:bg-slate-700/50 transition-colors group backface-hidden flex flex-col">
+                <div className="absolute w-full h-full bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm hover:bg-slate-700/50 transition-all duration-300 group backface-hidden flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-600/30 transition-colors">
+                    <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-600/30 transition-all duration-300 group-hover:scale-110">
                       {service.icon}
                     </div>
                     <div className="flex-1">
                       <span
-                        className={`text-sm px-3 py-1 rounded-full ${
+                        className={`text-sm px-3 py-1 rounded-full transition-colors duration-300 ${
                           service.stages === 'Learning Complete'
-                            ? 'bg-green-500/20 text-green-400'
+                            ? 'bg-green-500/20 text-green-400 group-hover:bg-green-500/30'
                             : service.stages === 'Learning in Progress'
-                            ? 'bg-yellow-500/20 text-yellow-400'
-                            : 'bg-blue-500/20 text-blue-400'
+                            ? 'bg-yellow-500/20 text-yellow-400 group-hover:bg-yellow-500/30'
+                            : 'bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30'
                         }`}
                       >
                         {service.stages}
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-400 flex-grow">
+                  <p className="text-gray-400 flex-grow group-hover:text-gray-300 transition-colors duration-300">
                     {service.description}
                   </p>
                   <div className="text-sm text-purple-400 mt-4 flex items-center gap-2">
@@ -168,13 +169,14 @@ const Services = () => {
                   <div className="flex-grow overflow-y-auto custom-scrollbar">
                     <ul className="space-y-3 pr-2">
                       {service.technologies.map((tech, techIndex) => (
-                        <li
+                        <motion.li
                           key={techIndex}
-                          className="flex items-center bg-slate-700/50 p-3 rounded-lg hover:bg-slate-700 transition-colors"
+                          whileHover={{ x: 10 }}
+                          className="flex items-center bg-slate-700/50 p-3 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group"
                         >
-                          <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                          {tech}
-                        </li>
+                          <span className="w-2 h-2 bg-purple-400 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></span>
+                          <span className="group-hover:text-purple-400 transition-colors duration-300">{tech}</span>
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
