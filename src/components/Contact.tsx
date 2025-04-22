@@ -1,19 +1,23 @@
-import { motion } from 'framer-motion';
-import { Mail, MessageSquareText, MapPin, Send } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Mail, MessageSquareText, MapPin, Send, Linkedin } from "lucide-react";
 
 const Contact = () => {
   const handlePhoneClick = () => {
-    window.location.href = 'https://wa.me/9824357565';
+    window.location.href = "https://wa.me/9824357565";
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:savanimeet11@gmail.com';
+    window.location.href = "mailto:savanimeet11@gmail.com";
   };
 
+  
+  const handleLinkedinClick = () => {
+    window.open("https://www.linkedin.com/in/meet-savani-30088931b/", "_blank");
+  };
+  
   const handleLocationClick = () => {
-    window.open('https://maps.google.com/?q=Surat,Gujarat,India', '_blank');
+    window.open("https://maps.google.com/?q=Surat,Gujarat,India", "_blank");
   };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,13 +33,13 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto font-mono">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Have a project in mind? Let's discuss how we can work together to
             bring your ideas to life.
           </p>
-          <b className="text-gray-400 max-w-2xl mx-auto font-mono">
-            If you want to contact me, click the left side button and if you want to send an email,
-            then fill up the form.
+          <b className="text-gray-400 max-w-2xl mx-auto">
+            If you want to contact me, click the left side button and if you
+            want to send an email, then fill up the form.
           </b>
         </motion.div>
 
@@ -47,12 +51,12 @@ const Contact = () => {
             whileHover={{ scale: 1.02 }}
             className="transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
           >
-            <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm font-mono">
+            <div className="bg-slate-800/50 p-8 h-full rounded-xl backdrop-blur-sm">
               <h3 className="text-2xl font-semibold mb-6 text-purple-400">
                 Contact Information
               </h3>
-              <div className="space-y-6">
-                <motion.div 
+              <div className="space-y-2">
+                <motion.div
                   className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
                   onClick={handleEmailClick}
                   whileHover={{ x: 10, scale: 1.02 }}
@@ -62,10 +66,12 @@ const Contact = () => {
                     <Mail size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">Email</p>
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">
+                      Email
+                    </p>
                   </div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
                   onClick={handlePhoneClick}
                   whileHover={{ x: 10, scale: 1.02 }}
@@ -75,10 +81,27 @@ const Contact = () => {
                     <MessageSquareText size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">Phone</p>
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">
+                      Phone
+                    </p>
                   </div>
                 </motion.div>
-                <motion.div 
+                <motion.div
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
+                  onClick={handleLinkedinClick}
+                  whileHover={{ x: 10, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-600/30 transition-all duration-300">
+                    <Linkedin size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">
+                      LinkedIn
+                    </p>
+                  </div>
+                </motion.div>
+                <motion.div
                   className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
                   onClick={handleLocationClick}
                   whileHover={{ x: 10, scale: 1.02 }}
@@ -88,7 +111,9 @@ const Contact = () => {
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">Location</p>
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">
+                      Location
+                    </p>
                   </div>
                 </motion.div>
               </div>
