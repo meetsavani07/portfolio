@@ -6,6 +6,7 @@ import MeetSavani from '../assets/Gallery-Image/Meet-Savani.png';
 import Freshmart from '../assets/Gallery-Image/Fresh-Mart.png';
 import Mindmap from '../assets/Gallery-Image/Mind-Map.png';
 import WorldWatch from '../assets/Gallery-Image/WorldWatch.png';
+import veggiebite from '../assets/Gallery-Image/VegggieBite.png'
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
@@ -46,9 +47,16 @@ const Gallery = () => {
       technologies: ['Next.js', 'Prisma', 'zustand', 'react-leaflet'],
       link: 'https://worldwatch-news.netlify.app/',
     },
+    {
+      title: 'VeggieBite',
+      category: 'API Development',
+      image: veggiebite,
+      technologies: ['Node JS', 'Express', 'MongoDB'],
+      link: 'https://veggiebite.netlify.app/',
+    }
   ];
 
-  const categories = ['all', 'Frontend Development', 'UI/UX Design'];
+  const categories = ['All', 'Frontend Development', 'UI/UX Design', 'API Development'];
 
   const filteredProjects =
     filter === 'all'
