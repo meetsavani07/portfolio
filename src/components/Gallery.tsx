@@ -18,6 +18,7 @@ const Gallery = () => {
       image: MeetSavani,
       technologies: ['Figma', 'React', 'Tailwind'],
       link: 'https://meet-savani.netlify.app/',
+      description: 'A modern portfolio website showcasing my work and skills, built with React and Tailwind CSS. Features smooth animations and responsive design.',
     },
     {
       title: 'Hospital-Management-System',
@@ -25,6 +26,7 @@ const Gallery = () => {
       image: HMSMedicare,
       technologies: ['Figma', 'React', 'Vite', 'Tailwind CSS'],
       link: 'https://hms-medicare.netlify.app/',
+      description: 'A comprehensive hospital management system with patient records, appointment scheduling, and medical staff management features.',
     },
     {
       title: 'Grosry Store',
@@ -32,6 +34,7 @@ const Gallery = () => {
       image: Freshmart,
       technologies: ['Vite.js', 'framer-motion'],
       link: 'https://freshmart-grocerystore.netlify.app/',
+      description: 'An e-commerce platform for grocery shopping with a modern UI, smooth animations, and an intuitive shopping experience.',
     },
     {
       title: 'Mind Map',
@@ -39,6 +42,7 @@ const Gallery = () => {
       image: Mindmap,
       technologies: ['@reactflow/node-resizer', 'Prisma', 'y-websocket'],
       link: 'https://mind-map-creater.netlify.app/',
+      description: 'A collaborative mind mapping tool that allows users to create, share, and edit mind maps in real-time.',
     },
     {
       title: 'World Watch',
@@ -46,6 +50,7 @@ const Gallery = () => {
       image: WorldWatch,
       technologies: ['Next.js', 'Prisma', 'zustand', 'react-leaflet'],
       link: 'https://worldwatch-news.netlify.app/',
+      description: 'A global news aggregator with interactive maps showing news coverage and events from around the world.',
     },
     {
       title: 'VeggieBite',
@@ -53,6 +58,7 @@ const Gallery = () => {
       image: veggiebite,
       technologies: ['Node JS', 'Express', 'MongoDB'],
       link: 'https://veggiebite.netlify.app/',
+      description: 'A RESTful API backend for a vegetarian recipe sharing platform with user authentication and recipe management.',
     }
   ];
 
@@ -117,49 +123,44 @@ const Gallery = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative overflow-hidden rounded-xl bg-slate-800/50 shadow-lg transition-all duration-300 hover:shadow-purple-500/20"
+                className="bg-slate-800/50 rounded-xl overflow-hidden"
               >
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <div className="aspect-w-16 aspect-h-9">
-                    <img
-                      src={project.image}
-                      // alt={project.title}
-                      className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-300"
-                    />
+                <div className="aspect-w-16 aspect-h-9">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-purple-400 text-sm">{project.category}</span>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-400 hover:text-purple-300 transition-colors duration-300"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
                   </div>
-                  <motion.div 
-                    className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"
-                    whileHover={{ opacity: 1 }}
-                  >
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <p className="text-purple-400 text-sm group-hover:text-purple-300 transition-colors duration-300">
-                          {project.category}
-                        </p>
-                        <ExternalLink className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300" size={20} />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors duration-300 font-mono">
-                        {project.title}
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="text-xs bg-purple-600/20 text-purple-400 px-2 py-1 rounded-full transition-all duration-300 hover:bg-purple-600/30 hover:scale-105"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                </a>
+                  <h3 className="text-xl font-semibold mb-3 text-white font-mono">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 mb-4 text-sm font-mono leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs bg-purple-600/20 text-purple-400 px-2 py-1 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
