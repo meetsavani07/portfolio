@@ -56,7 +56,7 @@ const Gallery = () => {
     }
   ];
 
-  const categories = ['All', 'Frontend Development', 'UI/UX Design', 'API Development'];
+  const categories = ['all', 'Frontend Development', 'UI/UX Design', 'API Development'];
 
   const filteredProjects =
     filter === 'all'
