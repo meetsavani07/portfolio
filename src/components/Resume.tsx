@@ -3,11 +3,11 @@ import { Download, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react';
 
 const Resume = () => {
   const skills = [
-    { name: 'React/Next.js', icon: '/src/assets/Image/react.svg' },
-    { name: 'TypeScript', icon: '/src/assets/Image/typescript.svg' },
-    { name: 'Node.js', icon: '/src/assets/Image/nodejs.svg' },
+    { name: 'React.JS', icon: '/src/assets/Image/react.png' },
+    { name: 'JavaScript', icon: '/src/assets/Image/javascript.png' },
+    { name: 'TypeScript', icon: '/src/assets/Image/typescript.png' },
+    { name: 'Node.js', icon: '/src/assets/Image/nodejs.png' },
     { name: 'UI/UX Design', icon: '/src/assets/Image/figma.svg' },
-    { name: 'Python', icon: '/src/assets/Image/python.svg' },
     
   ];
 
