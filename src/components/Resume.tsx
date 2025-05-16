@@ -1,14 +1,22 @@
 import { motion } from "framer-motion";
 import { Download, Briefcase, GraduationCap, Award, Code2 } from "lucide-react";
 import reactImg from "../assets/Image/react.png";
+import htmlImg from "../assets/Image/html.png";
+import cssImg from "../assets/Image/css.png";
+import jsImg from "../assets/Image/javascript.png";
+import tsImg from "../assets/Image/typescript.png";
+import nodejsImg from "../assets/Image/nodejs.png";
+import UIUXImg from "../assets/Image/figma.png";
 
 const Resume = () => {
   const skills = [
+    { name: "HTML", icon: htmlImg },
+    { name: "CSS", icon: cssImg },
+    { name: "JavaScript", icon:  jsImg },
+    { name: "TypeScript", icon:  tsImg },
     { name: "React.JS", icon: reactImg },
-    { name: "JavaScript", icon: "/src/assets/Image/javascript.png" },
-    { name: "TypeScript", icon: "/src/assets/Image/typescript.png" },
-    { name: "Node.js", icon: "/src/assets/Image/nodejs.png" },
-    { name: "UI/UX Design", icon: "/src/assets/Image/figma.svg" },
+    { name: "Node.js", icon:  nodejsImg },
+    { name: "UI/UX Design", icon:  UIUXImg },
   ];
 
   const experience = [
