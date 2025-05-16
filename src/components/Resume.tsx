@@ -1,40 +1,40 @@
-import { motion } from 'framer-motion';
-import { Download, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Download, Briefcase, GraduationCap, Award, Code2 } from "lucide-react";
+import reactImg from "../assets/Image/react.png";
 
 const Resume = () => {
   const skills = [
-    { name: 'React.JS', icon: '/src/assets/Image/react.png' },
-    { name: 'JavaScript', icon: '/src/assets/Image/javascript.png' },
-    { name: 'TypeScript', icon: '/src/assets/Image/typescript.png' },
-    { name: 'Node.js', icon: '/src/assets/Image/nodejs.png' },
-    { name: 'UI/UX Design', icon: '/src/assets/Image/figma.svg' },
-    
+    { name: "React.JS", icon: reactImg },
+    { name: "JavaScript", icon: "/src/assets/Image/javascript.png" },
+    { name: "TypeScript", icon: "/src/assets/Image/typescript.png" },
+    { name: "Node.js", icon: "/src/assets/Image/nodejs.png" },
+    { name: "UI/UX Design", icon: "/src/assets/Image/figma.svg" },
   ];
 
   const experience = [
     {
-      title: 'Frontend Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2023 - Internship',
+      title: "Frontend Developer",
+      company: "Tech Solutions Inc.",
+      period: "2023 - Internship",
       description:
-        'Led the frontend development team in creating modern web applications using React and TypeScript.',
+        "Led the frontend development team in creating modern web applications using React and TypeScript.",
     },
   ];
 
   const education = [
     {
-      degree: 'Bachelor of Computer Application',
-      school: 'Bhagawan Mahavir University',
-      period: '2022 - 2025',
-      description: 'Major in Computer Application with a minor in Design.',
+      degree: "Bachelor of Computer Application",
+      school: "Bhagawan Mahavir University",
+      period: "2022 - 2025",
+      description: "Major in Computer Application with a minor in Design.",
     },
   ];
 
   const certifications = [
-    { name: 'AWS Certified Developer', date: '2023' },
-    { name: 'Google Cloud Professional', date: '2023' },
-    { name: 'React Native Specialist', date: '2022' },
-    { name: 'UI/UX Design Professional', date: '2022' },
+    { name: "AWS Certified Developer", date: "2023" },
+    { name: "Google Cloud Professional", date: "2023" },
+    { name: "React Native Specialist", date: "2022" },
+    { name: "UI/UX Design Professional", date: "2022" },
   ];
 
   return (
@@ -79,7 +79,7 @@ const Resume = () => {
             className="lg:col-span-4 space-y-8 font-mono"
           >
             {/* Technical Skills */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
               className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
@@ -90,15 +90,15 @@ const Resume = () => {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {skills.map((skill) => (
-                  <motion.div 
+                  <motion.div
                     key={skill.name}
                     whileHover={{ scale: 1.05, y: -5 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-slate-700/50 p-4 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer group"
                   >
-                    <img 
-                      src={skill.icon} 
-                      alt={skill.name} 
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
                       className="w-12 h-12 ml-7 object-contain group-hover:scale-110 transition-transform duration-300"
                     />
                     <span className="text-sm text-center mt-3 block group-hover:text-purple-400 transition-colors duration-300">
@@ -110,7 +110,7 @@ const Resume = () => {
             </motion.div>
 
             {/* Certifications */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
               className="bg-slate-800/50 font-mono p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
@@ -146,7 +146,7 @@ const Resume = () => {
             className="lg:col-span-8 space-y-8"
           >
             {/* Experience */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
               className="bg-slate-800/50 font-mono p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
@@ -179,7 +179,7 @@ const Resume = () => {
             </motion.div>
 
             {/* Education */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
               className="bg-slate-800/50 font-mono p-8 rounded-xl backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
