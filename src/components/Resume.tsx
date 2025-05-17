@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Download, Briefcase, GraduationCap, Award, Code2 } from "lucide-react";
 import reactImg from "../assets/Image/react.png";
-import htmlImg from "../assets/Image/html.png";
-import cssImg from "../assets/Image/css.png";
+// import htmlImg from "../assets/Image/html.png";
+// import cssImg from "../assets/Image/css.png";
 import jsImg from "../assets/Image/javascript.png";
 import tsImg from "../assets/Image/typescript.png";
 import nodejsImg from "../assets/Image/nodejs.png";
@@ -10,8 +10,8 @@ import UIUXImg from "../assets/Image/figma.png";
 
 const Resume = () => {
   const skills = [
-    { name: "HTML", icon: htmlImg },
-    { name: "CSS", icon: cssImg },
+    // { name: "HTML", icon: htmlImg },
+    // { name: "CSS", icon: cssImg },
     { name: "JavaScript", icon:  jsImg },
     { name: "TypeScript", icon:  tsImg },
     { name: "React.JS", icon: reactImg },
@@ -39,8 +39,6 @@ const Resume = () => {
   ];
 
   const certifications = [
-    { name: "AWS Certified Developer", date: "2023" },
-    { name: "Google Cloud Professional", date: "2023" },
     { name: "React Native Specialist", date: "2022" },
     { name: "UI/UX Design Professional", date: "2022" },
   ];
@@ -94,7 +92,7 @@ const Resume = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Code2 className="text-purple-400" size={24} />
-                <h3 className="text-3xl font-semibold">Technical Skills</h3>
+                <h3 className="text-2xl">Technical Skills</h3>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {skills.map((skill) => (
@@ -102,12 +100,12 @@ const Resume = () => {
                     key={skill.name}
                     whileHover={{ scale: 1.05, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-slate-700/50 p-4 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer group"
+                    className="bg-slate-700/50 p-6 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer group"
                   >
                     <img
                       src={skill.icon}
                       alt={skill.name}
-                      className="w-12 h-12 ml-7 object-contain group-hover:scale-110 transition-transform duration-300"
+                      className="w-12 h-12 ml-7 sm:ml-3 object-contain group-hover:scale-110 transition-transform duration-300"
                     />
                     <span className="text-sm text-center mt-3 block group-hover:text-purple-400 transition-colors duration-300">
                       {skill.name}
