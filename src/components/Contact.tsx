@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MessageSquareText, MapPin, Send, Linkedin } from "lucide-react";
+import { Mail, MessageSquareText, MapPin, Send, Linkedin, Phone } from "lucide-react";
 
 const Contact = () => {
   const handlePhoneClick = () => {
@@ -10,7 +10,6 @@ const Contact = () => {
     window.location.href = "mailto:savanimeet11@gmail.com";
   };
 
-  
   const handleLinkedinClick = () => {
     window.open("https://www.linkedin.com/in/meet-savani-30088931b/", "_blank");
   };
@@ -18,6 +17,11 @@ const Contact = () => {
   const handleLocationClick = () => {
     window.open("https://maps.google.com/?q=Surat,Gujarat,India", "_blank");
   };
+
+  const handleCallClick = () => {
+    window.location.href = "tel:+919824357565";
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -82,7 +86,22 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">
-                      Phone
+                      WhatsApp
+                    </p>
+                  </div>
+                </motion.div>
+                <motion.div
+                  className="flex items-center space-x-4 cursor-pointer hover:bg-slate-700/50 p-3 rounded-lg transition-all duration-300"
+                  onClick={handleCallClick}
+                  whileHover={{ x: 10, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-600/30 transition-all duration-300">
+                    <Phone size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">
+                      Call
                     </p>
                   </div>
                 </motion.div>
