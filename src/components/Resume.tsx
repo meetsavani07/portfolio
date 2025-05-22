@@ -7,16 +7,17 @@ import jsImg from "../assets/Image/javascript.png";
 import tsImg from "../assets/Image/typescript.png";
 import nodejsImg from "../assets/Image/nodejs.png";
 import UIUXImg from "../assets/Image/figma.png";
+import myresume from '../assets/meet_resume.pdf';
 
 const Resume = () => {
   const skills = [
     // { name: "HTML", icon: htmlImg },
     // { name: "CSS", icon: cssImg },
-    { name: "JavaScript", icon:  jsImg },
-    { name: "TypeScript", icon:  tsImg },
+    { name: "JavaScript", icon: jsImg },
+    { name: "TypeScript", icon: tsImg },
     { name: "React.JS", icon: reactImg },
-    { name: "Node.js", icon:  nodejsImg },
-    { name: "UI/UX Design", icon:  UIUXImg },
+    { name: "Node.js", icon: nodejsImg },
+    { name: "UI/UX Design", icon: UIUXImg },
   ];
 
   const experience = [
@@ -69,6 +70,12 @@ const Resume = () => {
             transition={{ delay: 0.3 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = myresume; // path in public folder
+              link.download = "meet_savani_resume.pdf";
+              link.click();
+            }}
             className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
           >
             Download CV <Download size={20} />
