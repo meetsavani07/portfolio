@@ -53,7 +53,7 @@ const Contact = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
             whileHover={{ scale: 1.02 }}
-            className="transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+            className="transition-all duration-300 rounded-xl hover:shadow-lg hover:shadow-purple-500/20"
           >
             <div className="bg-slate-800/50 p-8 h-full rounded-xl backdrop-blur-sm">
               <h3 className="text-2xl font-semibold mb-6 text-purple-400">

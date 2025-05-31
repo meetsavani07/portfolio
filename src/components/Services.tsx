@@ -114,7 +114,7 @@ const Services = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + index * 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="relative h-[330px] cursor-pointer perspective-1000 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+              className="relative h-[330px] cursor-pointer perspective-1000 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
               onClick={() => toggleCard(index)}
             >
               <motion.div

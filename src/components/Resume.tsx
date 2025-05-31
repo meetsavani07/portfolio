@@ -23,8 +23,8 @@ const Resume = () => {
   const experience = [
     {
       title: "Frontend Developer",
-      company: "Tech Solutions Inc.",
-      period: "2023 - Internship",
+      company: "REJOICEHUB",
+      period: "2024 - Internship",
       description:
         "Led the frontend development team in creating modern web applications using React and TypeScript.",
     },
@@ -112,7 +112,7 @@ const Resume = () => {
                     <img
                       src={skill.icon}
                       alt={skill.name}
-                      className="w-12 h-12 ml-7 sm:ml-3 object-contain group-hover:scale-110 transition-transform duration-300"
+                      className="w-12 h-12 ml-7 sm:ml-6 object-contain group-hover:scale-110 transition-transform duration-300"
                     />
                     <span className="text-sm text-center mt-3 block group-hover:text-purple-400 transition-colors duration-300">
                       {skill.name}
