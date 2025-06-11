@@ -7,7 +7,7 @@ import jsImg from "../assets/Image/javascript.png";
 import tsImg from "../assets/Image/typescript.png";
 import nodejsImg from "../assets/Image/nodejs.png";
 import UIUXImg from "../assets/Image/figma.png";
-import myresume from '../assets/Meet_Resume.pdf';
+import myresume from "../assets/meet_cv.pdf"
 
 const Resume = () => {
   const skills = [
