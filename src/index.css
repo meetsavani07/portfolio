@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-900 text-white;
+  @apply bg-black text-white;
 }
 
 .aspect-w-16 {
@@ -40,7 +40,7 @@ body {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: rgba(139, 92, 246, 0.3) rgba(30, 41, 59, 0.5);
+  scrollbar-color: rgba(139, 92, 246, 0.3) rgba(15, 23, 42, 0.5);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -48,7 +48,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(30, 41, 59, 0.5);
+  background: rgba(15, 23, 42, 0.5);
   border-radius: 3px;
 }
 
@@ -90,6 +90,80 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Enhanced gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #000000 100%);
+}
+
+/* Custom selection colors */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Enhanced button hover effects */
+.btn-gradient {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Text gradient animation */
+.text-gradient-animate {
+  background: linear-gradient(45deg, #8b5cf6, #ec4899, #06b6d4, #10b981);
+  background-size: 300% 300%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Loading animation */
+.loading-dots {
+  display: inline-block;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -97,4 +171,16 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Dark theme enhancements */
+.dark-glass {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-glass:hover {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(139, 92, 246, 0.3);
 }
