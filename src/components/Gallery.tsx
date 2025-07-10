@@ -410,7 +410,7 @@ const Gallery = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative block w-full bg-slate-700/50 hover:bg-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group overflow-hidden"
+                      className="relative w-full bg-slate-700/50 hover:bg-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group overflow-hidden"
                       onClick={(e) => e.stopPropagation()}
                     >
                       {/* Shimmer effect */}

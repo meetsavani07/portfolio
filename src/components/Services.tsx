@@ -5,7 +5,6 @@ import {
   Database,
   Layout,
   Settings,
-  Smartphone,
   ArrowRight,
 } from 'lucide-react';
 import { useState } from 'react';
@@ -374,7 +373,7 @@ const Services = () => {
 
               <Link
                 to="/contact"
-                className="relative block group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-xl flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 font-semibold overflow-hidden"
+                className="relative group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-xl flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 font-semibold overflow-hidden"
               >
                 {/* Shimmer effect */}
                 <motion.div

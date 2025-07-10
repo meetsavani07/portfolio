@@ -22,7 +22,7 @@ import jsImg from '../assets/Image/javascript.png';
 import tsImg from '../assets/Image/typescript.png';
 import nodejsImg from '../assets/Image/nodejs.png';
 import UIUXImg from '../assets/Image/figma.png';
-import myresume from '../assets/Image/figma.png';
+import myresume from '../assets/meet_resume.pdf';
 
 const Resume = () => {
   const [showPDFModal, setShowPDFModal] = useState(false);
