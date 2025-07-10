@@ -22,7 +22,7 @@ import jsImg from '../assets/Image/javascript.png';
 import tsImg from '../assets/Image/typescript.png';
 import nodejsImg from '../assets/Image/nodejs.png';
 import UIUXImg from '../assets/Image/figma.png';
-import myresume from '../assets/meet_resume.pdf';
+import myresume from '../assets/Image/figma.png';
 
 const Resume = () => {
   const [showPDFModal, setShowPDFModal] = useState(false);
@@ -42,8 +42,8 @@ const Resume = () => {
     {
       title: 'Frontend Developer',
       company: 'Tech Solutions Inc.',
-      period: '2025 - Internship',
-      location: 'On Site',
+      period: '2023 - Internship',
+      location: 'Remote',
       description:
         'Led the frontend development team in creating modern web applications using React and TypeScript.',
       achievements: [
@@ -65,23 +65,28 @@ const Resume = () => {
       description:
         'Major in Computer Application with focus on modern web technologies.',
       gpa: '8.3/10',
-      courses: ['Data Structures', 'Web Development', 'Database Management', 'Software Engineering'],
+      courses: [
+        'Data Structures',
+        'Web Development',
+        'Database Management',
+        'Software Engineering',
+      ],
       link: 'https://www.bmuni.ac.in/',
     },
   ];
 
   const certifications = [
     {
-      name: 'React Specialist',
+      name: 'React Native Specialist',
       issuer: 'Meta',
-      date: '2024',
+      date: '2022',
       icon: '🏆',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       name: 'UI/UX Design Professional',
       issuer: 'Google',
-      date: '2023',
+      date: '2022',
       icon: '🎨',
       color: 'from-pink-500 to-purple-500',
     },
@@ -233,18 +238,18 @@ const Resume = () => {
                     className="absolute -inset-1 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-xl blur opacity-0 group-hover:opacity-75 transition-all duration-500"
                     animate={{
                       background: [
-                        "linear-gradient(45deg, #059669, #0d9488, #0891b2)",
-                        "linear-gradient(45deg, #0d9488, #0891b2, #059669)",
-                        "linear-gradient(45deg, #0891b2, #059669, #0d9488)"
-                      ]
+                        'linear-gradient(45deg, #059669, #0d9488, #0891b2)',
+                        'linear-gradient(45deg, #0d9488, #0891b2, #059669)',
+                        'linear-gradient(45deg, #0891b2, #059669, #0d9488)',
+                      ],
                     }}
                     transition={{
                       duration: 3,
                       repeat: Infinity,
-                      ease: "linear"
+                      ease: 'linear',
                     }}
                   />
-                  
+
                   {/* Floating particles effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     {[...Array(6)].map((_, i) => (
@@ -264,7 +269,7 @@ const Resume = () => {
                           duration: 2,
                           repeat: Infinity,
                           delay: i * 0.2,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       />
                     ))}
@@ -278,40 +283,40 @@ const Resume = () => {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100"
                       animate={{
-                        x: ["-100%", "100%"]
+                        x: ['-100%', '100%'],
                       }}
                       transition={{
                         duration: 1.5,
                         repeat: Infinity,
                         repeatDelay: 2,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     />
-                    
+
                     {/* Button content */}
                     <motion.div
                       className="relative z-10"
                       animate={{
-                        scale: [1, 1.1, 1]
+                        scale: [1, 1.1, 1],
                       }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     >
                       <Eye size={20} />
                     </motion.div>
-                    
+
                     <motion.span
                       className="relative z-10"
                       animate={{
-                        color: ["#ffffff", "#f0f0f0", "#ffffff"]
+                        color: ['#ffffff', '#f0f0f0', '#ffffff'],
                       }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     >
                       View Resume Online
@@ -326,7 +331,7 @@ const Resume = () => {
                       transition={{
                         duration: 1,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     />
                   </button>
@@ -343,18 +348,18 @@ const Resume = () => {
                     className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-xl blur opacity-0 group-hover:opacity-75 transition-all duration-500"
                     animate={{
                       background: [
-                        "linear-gradient(45deg, #2563eb, #9333ea, #ec4899)",
-                        "linear-gradient(45deg, #9333ea, #ec4899, #2563eb)",
-                        "linear-gradient(45deg, #ec4899, #2563eb, #9333ea)"
-                      ]
+                        'linear-gradient(45deg, #2563eb, #9333ea, #ec4899)',
+                        'linear-gradient(45deg, #9333ea, #ec4899, #2563eb)',
+                        'linear-gradient(45deg, #ec4899, #2563eb, #9333ea)',
+                      ],
                     }}
                     transition={{
                       duration: 3,
                       repeat: Infinity,
-                      ease: "linear"
+                      ease: 'linear',
                     }}
                   />
-                  
+
                   {/* Floating particles effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     {[...Array(6)].map((_, i) => (
@@ -374,7 +379,7 @@ const Resume = () => {
                           duration: 2,
                           repeat: Infinity,
                           delay: i * 0.2,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       />
                     ))}
@@ -388,40 +393,40 @@ const Resume = () => {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100"
                       animate={{
-                        x: ["-100%", "100%"]
+                        x: ['-100%', '100%'],
                       }}
                       transition={{
                         duration: 1.5,
                         repeat: Infinity,
                         repeatDelay: 2,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     />
-                    
+
                     {/* Button content */}
                     <motion.div
                       className="relative z-10"
                       animate={{
-                        y: [0, -5, 0]
+                        y: [0, -5, 0],
                       }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     >
                       <Download size={20} />
                     </motion.div>
-                    
+
                     <motion.span
                       className="relative z-10"
                       animate={{
-                        color: ["#ffffff", "#f0f0f0", "#ffffff"]
+                        color: ['#ffffff', '#f0f0f0', '#ffffff'],
                       }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     >
                       Download Resume
@@ -436,7 +441,7 @@ const Resume = () => {
                       transition={{
                         duration: 1,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: 'easeInOut',
                       }}
                     />
                   </button>
@@ -462,7 +467,7 @@ const Resume = () => {
                   <Code2 className="text-white" size={24} />
                 </div>
                 <h3 className="text-2xl font-bold text-white">
-                  Technical Skills
+                  Technical Skills & Tools
                 </h3>
               </div>
 
@@ -471,35 +476,35 @@ const Resume = () => {
                 {/* Gradient overlays for smooth fade effect */}
                 <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-slate-800/50 to-transparent z-10"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-800/50 to-transparent z-10"></div>
-                
+
                 {/* Scrolling Skills Container */}
                 <motion.div
                   className="flex flex-col space-y-4"
                   animate={{
-                    y: [0, -100 * (infiniteSkills.length / 3)]
+                    y: [0, -100 * (infiniteSkills.length / 3)],
                   }}
                   transition={{
                     duration: 20,
                     repeat: Infinity,
-                    ease: "linear"
+                    ease: 'linear',
                   }}
                 >
                   {infiniteSkills.map((skill, index) => (
                     <motion.div
                       key={`${skill.name}-${index}`}
                       className="group flex items-center gap-4 p-4 bg-slate-700/30 rounded-xl border border-slate-600/30 hover:border-purple-500/50 transition-all duration-300 min-h-[80px]"
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.05,
                         x: 10,
-                        backgroundColor: "rgba(71, 85, 105, 0.5)"
+                        backgroundColor: 'rgba(71, 85, 105, 0.5)',
                       }}
                       transition={{ duration: 0.2 }}
                     >
-                      <motion.div 
+                      <motion.div
                         className="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center flex-shrink-0"
-                        whileHover={{ 
+                        whileHover={{
                           scale: 1.2,
-                          rotate: 360
+                          rotate: 360,
                         }}
                         transition={{ duration: 0.5 }}
                       >
@@ -509,27 +514,41 @@ const Resume = () => {
                           className="w-8 h-8 object-contain"
                         />
                       </motion.div>
-                      
+
                       <div className="flex-1 min-w-0">
-                        <motion.span 
+                        <motion.span
                           className="font-semibold text-white group-hover:text-blue-400 transition-colors duration-300 block truncate"
                           whileHover={{ x: 5 }}
                         >
                           {skill.name}
                         </motion.span>
+
+                        {/* Animated skill level bar */}
+                        <div className="mt-2 w-full bg-slate-600/30 rounded-full h-2 overflow-hidden">
+                          <motion.div
+                            className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
+                            initial={{ width: 0 }}
+                            animate={{ width: '85%' }}
+                            transition={{
+                              duration: 1.5,
+                              delay: index * 0.1,
+                              ease: 'easeOut',
+                            }}
+                          />
+                        </div>
                       </div>
-                      
+
                       {/* Floating skill indicator */}
                       <motion.div
                         className="w-3 h-3 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100"
                         animate={{
                           scale: [1, 1.2, 1],
-                          opacity: [0.5, 1, 0.5]
+                          opacity: [0.5, 1, 0.5],
                         }}
                         transition={{
                           duration: 2,
                           repeat: Infinity,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       />
                     </motion.div>
@@ -538,7 +557,7 @@ const Resume = () => {
               </div>
 
               {/* Skills Summary */}
-              <motion.div 
+              <motion.div
                 className="mt-6 p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -628,14 +647,14 @@ const Resume = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
-                    whileHover={{ 
-                      scale: 1.02, 
+                    whileHover={{
+                      scale: 1.02,
                       y: -5,
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                     className="relative pl-8 border-l-2 border-green-500/30 hover:border-green-500 transition-all duration-300 group cursor-pointer"
                   >
-                    <motion.div 
+                    <motion.div
                       className="absolute w-5 h-5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full -left-[11px] top-3 shadow-lg shadow-green-500/50"
                       whileHover={{ scale: 1.3, rotate: 360 }}
                       transition={{ duration: 0.3 }}
@@ -651,7 +670,10 @@ const Resume = () => {
                             className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             whileHover={{ x: 5 }}
                           >
-                            <ChevronRight className="text-green-400" size={20} />
+                            <ChevronRight
+                              className="text-green-400"
+                              size={20}
+                            />
                           </motion.div>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-green-400 bg-green-500/10 px-3 py-1 rounded-full group-hover:bg-green-500/20 transition-colors duration-300">
@@ -676,8 +698,7 @@ const Resume = () => {
                             className="flex items-center gap-1 text-green-400 hover:text-green-300 transition-colors duration-300"
                             whileHover={{ scale: 1.05 }}
                             onClick={(e) => e.stopPropagation()}
-                          >
-                          </motion.a>
+                          ></motion.a>
                         )}
                       </div>
 
@@ -722,7 +743,7 @@ const Resume = () => {
                               whileHover={{ x: 5, scale: 1.02 }}
                               className="text-gray-300 text-sm flex items-start gap-3 group-hover:text-gray-200 transition-all duration-300 cursor-pointer"
                             >
-                              <motion.span 
+                              <motion.span
                                 className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"
                                 whileHover={{ scale: 1.5 }}
                               />
@@ -753,14 +774,14 @@ const Resume = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 + index * 0.1 }}
-                    whileHover={{ 
-                      scale: 1.02, 
+                    whileHover={{
+                      scale: 1.02,
                       y: -5,
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                     className="relative pl-8 border-l-2 border-orange-500/30 hover:border-orange-500 transition-all duration-300 group cursor-pointer"
                   >
-                    <motion.div 
+                    <motion.div
                       className="absolute w-5 h-5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full -left-[11px] top-3 shadow-lg shadow-orange-500/50"
                       whileHover={{ scale: 1.3, rotate: 360 }}
                       transition={{ duration: 0.3 }}
@@ -776,7 +797,10 @@ const Resume = () => {
                             className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             whileHover={{ x: 5 }}
                           >
-                            <ChevronRight className="text-orange-400" size={20} />
+                            <ChevronRight
+                              className="text-orange-400"
+                              size={20}
+                            />
                           </motion.div>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-orange-400 bg-orange-500/10 px-3 py-1 rounded-full group-hover:bg-orange-500/20 transition-colors duration-300">
@@ -807,8 +831,7 @@ const Resume = () => {
                             className="flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors duration-300"
                             whileHover={{ scale: 1.05 }}
                             onClick={(e) => e.stopPropagation()}
-                          >
-                          </motion.a>
+                          ></motion.a>
                         )}
                       </div>
 
@@ -859,7 +882,7 @@ const Resume = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ type: "spring", duration: 0.5 }}
+            transition={{ type: 'spring', duration: 0.5 }}
             className="bg-slate-800/90 backdrop-blur-md rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] border border-slate-700/50"
             onClick={(e) => e.stopPropagation()}
           >
@@ -870,11 +893,15 @@ const Resume = () => {
                   <Eye className="text-white" size={20} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Resume Preview</h3>
-                  <p className="text-sm text-gray-400">Meet Savani - Frontend Developer</p>
+                  <h3 className="text-xl font-bold text-white">
+                    Resume Preview
+                  </h3>
+                  <p className="text-sm text-gray-400">
+                    Meet Savani - Frontend Developer
+                  </p>
                 </div>
               </div>
-              
+
               <motion.button
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
@@ -891,12 +918,15 @@ const Resume = () => {
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Eye className="text-white" size={32} />
                 </div>
-                
-                <h4 className="text-lg font-semibold text-white">Choose Viewing Option</h4>
+
+                <h4 className="text-lg font-semibold text-white">
+                  Choose Viewing Option
+                </h4>
                 <p className="text-gray-400 text-sm max-w-md mx-auto">
-                  Select how you'd like to view the resume. You can open it in a new tab for better viewing experience.
+                  Select how you'd like to view the resume. You can open it in a
+                  new tab for better viewing experience.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
@@ -908,18 +938,18 @@ const Resume = () => {
                       className="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl blur opacity-0 group-hover:opacity-75 transition-all duration-500"
                       animate={{
                         background: [
-                          "linear-gradient(45deg, #059669, #0d9488)",
-                          "linear-gradient(45deg, #0d9488, #059669)",
-                          "linear-gradient(45deg, #059669, #0d9488)"
-                        ]
+                          'linear-gradient(45deg, #059669, #0d9488)',
+                          'linear-gradient(45deg, #0d9488, #059669)',
+                          'linear-gradient(45deg, #059669, #0d9488)',
+                        ],
                       }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
-                        ease: "linear"
+                        ease: 'linear',
                       }}
                     />
-                    
+
                     {/* Floating particles effect */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       {[...Array(6)].map((_, i) => (
@@ -939,7 +969,7 @@ const Resume = () => {
                             duration: 2,
                             repeat: Infinity,
                             delay: i * 0.2,
-                            ease: "easeInOut"
+                            ease: 'easeInOut',
                           }}
                         />
                       ))}
@@ -953,40 +983,40 @@ const Resume = () => {
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100"
                         animate={{
-                          x: ["-100%", "100%"]
+                          x: ['-100%', '100%'],
                         }}
                         transition={{
                           duration: 1.5,
                           repeat: Infinity,
                           repeatDelay: 2,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       />
-                      
+
                       {/* Button content */}
                       <motion.div
                         className="relative z-10"
                         animate={{
-                          scale: [1, 1.1, 1]
+                          scale: [1, 1.1, 1],
                         }}
                         transition={{
                           duration: 2,
                           repeat: Infinity,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       >
                         <ExternalLink size={18} />
                       </motion.div>
-                      
+
                       <motion.span
                         className="relative z-10"
                         animate={{
-                          color: ["#ffffff", "#f0f0f0", "#ffffff"]
+                          color: ['#ffffff', '#f0f0f0', '#ffffff'],
                         }}
                         transition={{
                           duration: 2,
                           repeat: Infinity,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       >
                         Open in New Tab
@@ -1001,12 +1031,12 @@ const Resume = () => {
                         transition={{
                           duration: 1,
                           repeat: Infinity,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       />
                     </button>
                   </motion.div>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
@@ -1017,18 +1047,18 @@ const Resume = () => {
                       className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-0 group-hover:opacity-75 transition-all duration-500"
                       animate={{
                         background: [
-                          "linear-gradient(45deg, #2563eb, #9333ea)",
-                          "linear-gradient(45deg, #9333ea, #2563eb)",
-                          "linear-gradient(45deg, #2563eb, #9333ea)"
-                        ]
+                          'linear-gradient(45deg, #2563eb, #9333ea)',
+                          'linear-gradient(45deg, #9333ea, #2563eb)',
+                          'linear-gradient(45deg, #2563eb, #9333ea)',
+                        ],
                       }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
-                        ease: "linear"
+                        ease: 'linear',
                       }}
                     />
-                    
+
                     {/* Floating particles effect */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       {[...Array(6)].map((_, i) => (
@@ -1048,7 +1078,7 @@ const Resume = () => {
                             duration: 2,
                             repeat: Infinity,
                             delay: i * 0.2,
-                            ease: "easeInOut"
+                            ease: 'easeInOut',
                           }}
                         />
                       ))}
@@ -1062,40 +1092,40 @@ const Resume = () => {
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100"
                         animate={{
-                          x: ["-100%", "100%"]
+                          x: ['-100%', '100%'],
                         }}
                         transition={{
                           duration: 1.5,
                           repeat: Infinity,
                           repeatDelay: 2,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       />
-                      
+
                       {/* Button content */}
                       <motion.div
                         className="relative z-10"
                         animate={{
-                          y: [0, -5, 0]
+                          y: [0, -5, 0],
                         }}
                         transition={{
                           duration: 2,
                           repeat: Infinity,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       >
                         <Download size={18} />
                       </motion.div>
-                      
+
                       <motion.span
                         className="relative z-10"
                         animate={{
-                          color: ["#ffffff", "#f0f0f0", "#ffffff"]
+                          color: ['#ffffff', '#f0f0f0', '#ffffff'],
                         }}
                         transition={{
                           duration: 2,
                           repeat: Infinity,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       >
                         Download PDF
@@ -1110,7 +1140,7 @@ const Resume = () => {
                         transition={{
                           duration: 1,
                           repeat: Infinity,
-                          ease: "easeInOut"
+                          ease: 'easeInOut',
                         }}
                       />
                     </button>
@@ -1122,15 +1152,21 @@ const Resume = () => {
             {/* Quick Info */}
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-slate-700/20 rounded-lg p-4 text-center">
-                <div className="text-emerald-400 font-semibold text-sm">File Format</div>
+                <div className="text-emerald-400 font-semibold text-sm">
+                  File Format
+                </div>
                 <div className="text-white font-medium">PDF Document</div>
               </div>
               <div className="bg-slate-700/20 rounded-lg p-4 text-center">
-                <div className="text-emerald-400 font-semibold text-sm">Last Updated</div>
+                <div className="text-emerald-400 font-semibold text-sm">
+                  Last Updated
+                </div>
                 <div className="text-white font-medium">December 2024</div>
               </div>
               <div className="bg-slate-700/20 rounded-lg p-4 text-center">
-                <div className="text-emerald-400 font-semibold text-sm">File Size</div>
+                <div className="text-emerald-400 font-semibold text-sm">
+                  File Size
+                </div>
                 <div className="text-white font-medium">~2.5 MB</div>
               </div>
             </div>

@@ -1,6 +1,15 @@
 import { motion } from 'framer-motion';
-import { Globe, PenTool, Database, Layout, Settings, Smartphone } from 'lucide-react';
+import {
+  Globe,
+  PenTool,
+  Database,
+  Layout,
+  Settings,
+  Smartphone,
+  ArrowRight,
+} from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
@@ -16,22 +25,24 @@ const Services = () => {
       icon: <PenTool size={28} />,
       stages: 'Learning Complete',
       title: 'UI/UX Design',
-      description: 'Beautiful and intuitive user interfaces that enhance user experience and drive engagement.',
+      description:
+        'Beautiful and intuitive user interfaces that enhance user experience and drive engagement.',
       technologies: [
-        'Figma', 
-        'Adobe XD', 
+        'Figma',
+        'Adobe XD',
         'WIX',
         'Sketch',
         'Prototyping',
-        'User Research'
+        'User Research',
       ],
-      color: 'from-pink-500 to-rose-500'
+      color: 'from-pink-500 to-rose-500',
     },
     {
       icon: <Layout size={28} />,
       stages: 'Learning in Progress',
       title: 'Frontend Development',
-      description: 'Modern and responsive frontend implementations with latest frameworks and best practices.',
+      description:
+        'Modern and responsive frontend implementations with latest frameworks and best practices.',
       technologies: [
         'React.js',
         'Vue.js',
@@ -40,31 +51,33 @@ const Services = () => {
         'Framer Motion',
         'Tailwind UI',
         'SCSS/SASS',
-        'Bootstrap'
+        'Bootstrap',
       ],
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: <Database size={28} />,
       stages: 'Starting Soon',
       title: 'Backend Development',
-      description: 'Robust and scalable server-side solutions for your applications with modern architecture.',
+      description:
+        'Robust and scalable server-side solutions for your applications with modern architecture.',
       technologies: [
-        'Node.js', 
-        'Express.js', 
-        'MongoDB', 
+        'Node.js',
+        'Express.js',
+        'MongoDB',
         'Supabase',
         'PostgreSQL',
         'REST APIs',
-        'GraphQL'
+        'GraphQL',
       ],
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     },
     {
       icon: <Globe size={28} />,
       stages: 'Learning in Progress',
       title: 'Web Development',
-      description: 'Custom websites built with modern technologies, SEO optimization, and performance focus.',
+      description:
+        'Custom websites built with modern technologies, SEO optimization, and performance focus.',
       technologies: [
         'HTML5',
         'CSS3',
@@ -73,39 +86,25 @@ const Services = () => {
         'React.js',
         'Next.js',
         'Vite',
-        'Webpack'
+        'Webpack',
       ],
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      icon: <Smartphone size={28} />,
-      stages: 'Learning in Progress',
-      title: 'Mobile Development',
-      description: 'Cross-platform mobile applications with native performance and modern UI.',
-      technologies: [
-        'React Native',
-        'Flutter',
-        'Expo',
-        'Mobile UI/UX',
-        'App Store Deploy',
-        'Push Notifications'
-      ],
-      color: 'from-orange-500 to-red-500'
+      color: 'from-purple-500 to-indigo-500',
     },
     {
       icon: <Settings size={28} />,
       stages: 'Starting Soon',
       title: 'Technical Consulting',
-      description: 'Expert advice on technology stack, architecture decisions, and project optimization.',
+      description:
+        'Expert advice on technology stack, architecture decisions, and project optimization.',
       technologies: [
         'System Architecture',
         'Cloud Services',
         'Performance Optimization',
         'Security',
         'Code Review',
-        'Best Practices'
+        'Best Practices',
       ],
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-yellow-500 to-orange-500',
     },
   ];
 
@@ -143,12 +142,12 @@ const Services = () => {
             </h2>
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full"></div>
           </div>
-          
+
           <p className="text-gray-300 max-w-3xl mx-auto text-lg font-mono leading-relaxed mb-6">
             Comprehensive solutions tailored to your needs. From concept to
             deployment, I deliver quality results that exceed expectations.
           </p>
-          
+
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -179,41 +178,49 @@ const Services = () => {
                 className="w-full h-full relative"
                 initial={false}
                 animate={{ rotateY: flippedCards.includes(index) ? 180 : 0 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ 
+                transition={{ duration: 0.6, ease: 'easeInOut' }}
+                style={{
                   transformStyle: 'preserve-3d',
-                  transformOrigin: 'center center'
+                  transformOrigin: 'center center',
                 }}
               >
                 {/* Front of card */}
-                <div 
+                <div
                   className="absolute w-full h-full bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 flex flex-col"
-                  style={{ 
+                  style={{
                     backfaceVisibility: 'hidden',
-                    WebkitBackfaceVisibility: 'hidden'
+                    WebkitBackfaceVisibility: 'hidden',
                   }}
                 >
                   {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`} />
-                  
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}
+                  />
+
                   <div className="flex items-start justify-between mb-6 relative z-10">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    >
                       {service.icon}
                     </div>
-                    
-                    <span className={`text-xs px-3 py-2 rounded-full border transition-all duration-300 font-medium ${getStageColor(service.stages)}`}>
+
+                    <span
+                      className={`text-xs px-3 py-2 rounded-full border transition-all duration-300 font-medium ${getStageColor(
+                        service.stages
+                      )}`}
+                    >
                       {service.stages}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors duration-300 relative z-10">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-400 flex-grow group-hover:text-gray-300 transition-colors duration-300 font-mono leading-relaxed relative z-10">
                     {service.description}
                   </p>
-                  
+
                   <div className="mt-6 pt-4 border-t border-slate-700/50 relative z-10">
                     <div className="flex items-center justify-between text-sm text-purple-400">
                       <span className="font-medium">View Technologies</span>
@@ -229,33 +236,38 @@ const Services = () => {
                 </div>
 
                 {/* Back of card */}
-                <div 
+                <div
                   className="absolute w-full h-full bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-colors flex flex-col"
-                  style={{ 
+                  style={{
                     backfaceVisibility: 'hidden',
                     WebkitBackfaceVisibility: 'hidden',
-                    transform: 'rotateY(180deg)'
+                    transform: 'rotateY(180deg)',
                   }}
                 >
                   {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-5 rounded-2xl`} />
-                  
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-5 rounded-2xl`}
+                  />
+
                   <div className="flex items-center gap-3 mb-6 relative z-10">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center text-white shadow-lg`}>
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center text-white shadow-lg`}
+                    >
                       {service.icon}
                     </div>
                     <h3 className="text-xl font-bold text-purple-400">
                       Technologies & Tools
                     </h3>
                   </div>
-                  
+
                   {/* Scrollable content area */}
                   <div className="flex-grow overflow-hidden relative z-10">
-                    <div 
+                    <div
                       className="h-full overflow-y-auto pr-2"
                       style={{
                         scrollbarWidth: 'thin',
-                        scrollbarColor: 'rgba(139, 92, 246, 0.3) rgba(15, 23, 42, 0.5)'
+                        scrollbarColor:
+                          'rgba(139, 92, 246, 0.3) rgba(15, 23, 42, 0.5)',
                       }}
                     >
                       <div className="space-y-3">
@@ -268,7 +280,9 @@ const Services = () => {
                             whileHover={{ x: 10, scale: 1.02 }}
                             className="flex items-center bg-slate-700/50 p-3 rounded-lg hover:bg-slate-700 transition-all duration-300 group border border-slate-600/30 hover:border-purple-500/50"
                           >
-                            <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 group-hover:scale-125 transition-transform duration-300 shadow-sm flex-shrink-0`}></div>
+                            <div
+                              className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 group-hover:scale-125 transition-transform duration-300 shadow-sm flex-shrink-0`}
+                            ></div>
                             <span className="group-hover:text-purple-400 transition-colors duration-300 font-medium text-sm">
                               {tech}
                             </span>
@@ -277,7 +291,7 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-4 pt-4 border-t border-slate-700/50 relative z-10">
                     <div className="flex items-center justify-between text-sm text-purple-400">
                       <span className="font-medium">Back to Overview</span>
@@ -308,7 +322,8 @@ const Services = () => {
               Ready to Start Your Project?
             </h3>
             <p className="text-gray-300 mb-8 font-mono max-w-2xl mx-auto">
-              Let's discuss how I can help bring your ideas to life with modern web technologies and creative solutions.
+              Let's discuss how I can help bring your ideas to life with modern
+              web technologies and creative solutions.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -320,18 +335,18 @@ const Services = () => {
                 className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 rounded-xl blur opacity-0 group-hover:opacity-75 transition-all duration-500"
                 animate={{
                   background: [
-                    "linear-gradient(45deg, #8b5cf6, #ec4899, #8b5cf6)",
-                    "linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899)",
-                    "linear-gradient(45deg, #8b5cf6, #ec4899, #8b5cf6)"
-                  ]
+                    'linear-gradient(45deg, #8b5cf6, #ec4899, #8b5cf6)',
+                    'linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899)',
+                    'linear-gradient(45deg, #8b5cf6, #ec4899, #8b5cf6)',
+                  ],
                 }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: 'linear',
                 }}
               />
-              
+
               {/* Floating particles effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {[...Array(6)].map((_, i) => (
@@ -351,41 +366,62 @@ const Services = () => {
                       duration: 2,
                       repeat: Infinity,
                       delay: i * 0.2,
-                      ease: "easeInOut"
+                      ease: 'easeInOut',
                     }}
                   />
                 ))}
               </div>
 
-              <button className="relative bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-purple-500/25 overflow-hidden">
+              <Link
+                to="/contact"
+                className="relative block group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-xl flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 font-semibold overflow-hidden"
+              >
                 {/* Shimmer effect */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100"
                   animate={{
-                    x: ["-100%", "100%"]
+                    x: ['-100%', '100%'],
                   }}
                   transition={{
                     duration: 1.5,
                     repeat: Infinity,
                     repeatDelay: 2,
-                    ease: "easeInOut"
+                    ease: 'easeInOut',
                   }}
                 />
-                
+
                 {/* Button content */}
                 <motion.span
                   className="relative z-10"
                   animate={{
-                    color: ["#ffffff", "#f0f0f0", "#ffffff"]
+                    color: ['#ffffff', '#f0f0f0', '#ffffff'],
                   }}
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: 'easeInOut',
                   }}
                 >
-                  Get In Touch
+                  Get in touch
                 </motion.span>
+
+                <motion.div
+                  className="relative z-10"
+                  animate={{
+                    x: [0, 5, 0],
+                    rotate: [0, 15, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                >
+                  <ArrowRight
+                    size={20}
+                    className="group-hover:translate-x-1 transition-transform duration-300"
+                  />
+                </motion.div>
 
                 {/* Ripple effect on hover */}
                 <motion.div
@@ -396,10 +432,10 @@ const Services = () => {
                   transition={{
                     duration: 1,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: 'easeInOut',
                   }}
                 />
-              </button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>
