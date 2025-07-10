@@ -77,7 +77,7 @@ const Home: React.FC = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className="flex flex-col sm:flex-row items-start gap-6"
+                className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -192,7 +192,7 @@ const Home: React.FC = () => {
                   </Link>
                 </motion.div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   {[
                     {
                       href: 'https://github.com/meetsavani07',
@@ -230,10 +230,10 @@ const Home: React.FC = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.8 + index * 0.1 }}
-                      className="p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl text-gray-400 hover:text-purple-400 transition-all duration-300 border border-slate-700/50 hover:border-purple-500/50 group"
+                      className="p-2 sm:p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl text-gray-400 hover:text-purple-400 transition-all duration-300 border border-slate-700/50 hover:border-purple-500/50 group"
                       title={social.label}
                     >
-                      <social.icon size={20} />
+                      <social.icon size={18} className="sm:w-5 sm:h-5" />
                     </motion.a>
                   ))}
                 </div>
@@ -244,7 +244,7 @@ const Home: React.FC = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="relative"
+              className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
             >
               {/* Outer rotating ring */}
               <motion.div
@@ -292,69 +292,6 @@ const Home: React.FC = () => {
                 }}
               />
 
-              {/* Floating particles around avatar */}
-              {[...Array(8)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 bg-purple-400 rounded-full"
-                  style={{
-                    left: '50%',
-                    top: '50%',
-                  }}
-                  animate={{
-                    x: [0, Math.cos((i * 45 * Math.PI) / 180) * 120],
-                    y: [0, Math.sin((i * 45 * Math.PI) / 180) * 120],
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: i * 0.2,
-                    ease: 'easeInOut',
-                  }}
-                />
-              ))}
-
-              {/* Orbiting elements */}
-              <motion.div
-                className="absolute w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg"
-                style={{
-                  left: '50%',
-                  top: '50%',
-                  marginLeft: '-8px',
-                  marginTop: '-8px',
-                }}
-                animate={{
-                  x: [0, 100, 0, -100, 0],
-                  y: [0, 0, 100, 0, 0],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: 'linear',
-                }}
-              />
-
-              <motion.div
-                className="absolute w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg"
-                style={{
-                  left: '50%',
-                  top: '50%',
-                  marginLeft: '-6px',
-                  marginTop: '-6px',
-                }}
-                animate={{
-                  x: [0, -80, 0, 80, 0],
-                  y: [0, 80, 0, -80, 0],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: 'linear',
-                }}
-              />
-
               {/* Breathing effect background */}
               <motion.div
                 className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/10 to-pink-600/10"
@@ -368,7 +305,7 @@ const Home: React.FC = () => {
                 }}
               />
 
-              <motion.img
+              <img
                 src={homeimage}
                 alt="Profile"
                 className="rounded-2xl w-full object-cover relative z-10 shadow-2xl bg-transparent"
@@ -376,43 +313,7 @@ const Home: React.FC = () => {
                   clipPath: 'inset(0 round 1rem)',
                   backgroundColor: 'transparent',
                 }}
-                whileHover={{
-                  scale: 1.05,
-                  rotate: [0, 2, -2, 0],
-                  boxShadow: '0 25px 50px rgba(139, 92, 246, 0.3)',
-                }}
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
               />
-
-              {/* Sparkle effects */}
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={`sparkle-${i}`}
-                  className="absolute w-1 h-1 bg-white rounded-full"
-                  style={{
-                    left: `${20 + i * 15}%`,
-                    top: `${15 + (i % 3) * 25}%`,
-                  }}
-                  animate={{
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0],
-                    rotate: [0, 180, 360],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.3,
-                    ease: 'easeInOut',
-                  }}
-                />
-              ))}
             </motion.div>
           </div>
         </div>
@@ -425,12 +326,12 @@ const Home: React.FC = () => {
         exit={{ opacity: 0 }}
         className="min-h-screen bg-gradient-to-br from-slate-900 via-black to-slate-900 flex flex-col items-center px-4 md:px-8"
       >
-        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl min-h-screen text-left md:text-left">
+        <div className="flex flex-col items-center justify-center w-full max-w-6xl min-h-screen">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="w-full px-4"
+            className="w-full"
           >
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -438,7 +339,7 @@ const Home: React.FC = () => {
               transition={{ delay: 0.3 }}
               className="text-center mb-12"
             >
-              <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-8">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-8">
                 LET ME{' '}
                 <span className="bg-gradient-to-r from-pink-400 via-purple-500 to-purple-600 bg-clip-text text-transparent">
                   INTRODUCE{' '}
@@ -447,8 +348,8 @@ const Home: React.FC = () => {
               </h1>
             </motion.div>
 
-            <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl mb-10 p-8 border border-slate-700/50 hover:border-purple-500/30 transition-all duration-300">
-              <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
+            <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl mb-10 p-4 sm:p-6 md:p-8 border border-slate-700/50 hover:border-purple-500/30 transition-all duration-300">
+              <div className="space-y-4 sm:space-y-6 text-gray-300 font-mono leading-relaxed text-sm sm:text-base">
                 {[
                   "I'm a passionate frontend developer with a creative mindset and a dedication to crafting exceptional user experiences. 🚀",
                   'My expertise lies in modern web technologies, particularly React.js, Next.js, and TypeScript. I love bringing designs to life with smooth animations and responsive layouts.',
@@ -462,7 +363,7 @@ const Home: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 + index * 0.1 }}
-                    className="hover:text-white transition-colors duration-300 p-4 rounded-lg hover:bg-slate-700/20"
+                    className="hover:text-white transition-colors duration-300 p-2 sm:p-3 md:p-4 rounded-lg hover:bg-slate-700/20"
                   >
                     {text.split(' ').map((word, wordIndex) => {
                       const isHighlight = [
