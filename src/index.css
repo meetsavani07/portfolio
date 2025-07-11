@@ -82,12 +82,34 @@ html {
 /* Prevent content shift on page load */
 html {
   scrollbar-gutter: stable;
+  overflow-x: hidden;
 }
 
 /* Optimize animations */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive animation adjustments */
+@media (max-width: 768px) {
+  .motion-reduce {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Prevent horizontal overflow on mobile */
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ensure containers don't overflow */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Enhanced gradient backgrounds */
@@ -171,6 +193,12 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  
+  /* Disable complex animations on mobile for better performance */
+  .motion-safe {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* Dark theme enhancements */
@@ -184,3 +212,49 @@ html {
   background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(139, 92, 246, 0.3);
 }
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  /* Reduce blur effects on mobile for better performance */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(6px);
+  }
+  
+  /* Optimize transforms for mobile */
+  .transform {
+    will-change: transform;
+  }
+  
+  /* Reduce complex gradients on mobile */
+  .bg-gradient-to-r,
+  .bg-gradient-to-br {
+    background-attachment: scroll;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Medium screen adjustments */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  /* Full effects for desktop */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(16px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(24px);
+  }
+} 

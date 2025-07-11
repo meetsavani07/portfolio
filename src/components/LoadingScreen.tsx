@@ -83,7 +83,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             className="mb-12"
           >
             {/* Animated Name with Letter-by-Letter Animation */}
-            <div className="text-6xl md:text-8xl font-black mb-4">
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4">
               {"Meet Savani".split("").map((char, index) => (
                 <motion.span
                   key={index}
@@ -108,7 +108,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                     stiffness: 100
                   }}
                   whileHover={{
-                    scale: 1.2,
+                    scale: window.innerWidth < 768 ? 1.1 : 1.2,
                     rotateY: 360,
                     color: "#ec4899"
                   }}
@@ -127,7 +127,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.6 }}
-              className="text-lg md:text-xl text-gray-400 font-mono mb-4"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 font-mono mb-4 px-4"
             >
               {"Frontend Developer & UI Designer".split("").map((char, index) => (
                 <motion.span
@@ -150,7 +150,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               animate={{ width: "100%" }}
               transition={{ duration: 1.5, delay: 1.8 }}
               className="h-1 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full mx-auto mt-4 relative overflow-hidden"
-              style={{ maxWidth: "300px" }}
+              style={{ maxWidth: window.innerWidth < 768 ? "200px" : "300px" }}
             >
               {/* Animated glow effect */}
               <motion.div
@@ -173,7 +173,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           {/* Rotating loading ring */}
           <div className="relative mb-8">
             <motion.div
-              className="w-32 h-32 mx-auto relative"
+              className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto relative"
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
             >
@@ -187,7 +187,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             
             {/* Inner pulsing circle */}
             <motion.div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.7, 1, 0.7],
@@ -201,7 +201,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           </div>
 
           {/* Progress bar */}
-          <div className="w-80 mx-auto mb-6">
+          <div className="w-64 sm:w-72 md:w-80 mx-auto mb-6 px-4">
             <div className="bg-slate-800/50 rounded-full h-2 overflow-hidden backdrop-blur-sm border border-slate-700/50">
               <motion.div
                 className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full relative overflow-hidden"
@@ -226,7 +226,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             
             {/* Progress percentage */}
             <motion.div 
-              className="text-center mt-3 text-purple-400 font-mono text-lg font-semibold"
+              className="text-center mt-3 text-purple-400 font-mono text-base sm:text-lg font-semibold"
               animate={{
                 opacity: [0.7, 1, 0.7],
               }}
@@ -241,7 +241,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           </div>
 
           {/* Loading text with typewriter effect */}
-          <div className="text-gray-300 font-mono text-lg h-8 flex items-center justify-center">
+          <div className="text-gray-300 font-mono text-sm sm:text-base md:text-lg h-8 flex items-center justify-center px-4">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentText}
@@ -293,7 +293,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             {["React", "TypeScript", "Tailwind", "Framer"].map((tech, index) => (
               <motion.div
                 key={tech}
-                className="absolute text-purple-400/30 font-mono text-sm"
+                className="absolute text-purple-400/30 font-mono text-xs sm:text-sm"
                 style={{
                   left: `${20 + index * 20}%`,
                   top: `${30 + (index % 2) * 40}%`,
@@ -302,7 +302,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                 animate={{ 
                   opacity: [0, 0.6, 0],
                   scale: [0, 1, 0],
-                  y: [0, -30, -60],
+                  y: [0, window.innerWidth < 768 ? -20 : -30, window.innerWidth < 768 ? -40 : -60],
                   rotate: [0, 360]
                 }}
                 transition={{
@@ -319,7 +319,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
           {/* Glitch effect text (appears occasionally) */}
           <motion.div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl md:text-8xl font-black text-red-500/20 pointer-events-none"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-red-500/20 pointer-events-none"
             animate={{
               opacity: [0, 0, 0, 0.3, 0],
               x: [0, -2, 2, -1, 0],
@@ -343,14 +343,14 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={`float-${i}`}
-              className="absolute w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
+              className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
               style={{
                 left: '50%',
                 top: '50%',
               }}
               animate={{
-                x: [0, Math.cos(i * 45 * Math.PI / 180) * 150],
-                y: [0, Math.sin(i * 45 * Math.PI / 180) * 150],
+                x: [0, Math.cos(i * 45 * Math.PI / 180) * (window.innerWidth < 768 ? 80 : 150)],
+                y: [0, Math.sin(i * 45 * Math.PI / 180) * (window.innerWidth < 768 ? 80 : 150)],
                 scale: [0, 1, 0],
                 opacity: [0, 0.8, 0],
               }}
@@ -380,7 +380,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             {[...Array(3)].map((_, i) => (
               <motion.div
                 key={i}
-                className="w-2 h-2 bg-purple-400 rounded-full"
+                className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full"
                 animate={{
                   scale: [1, 1.5, 1],
                   opacity: [0.5, 1, 0.5],
