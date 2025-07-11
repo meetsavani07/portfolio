@@ -244,7 +244,7 @@ const Contact = () => {
                   <Clock className="text-green-400" size={20} />
                 </div>
                 <h4 className="font-semibold text-green-400">
-                  Available for Freelance Work
+                  Available for Freelance Work and On Site Work
                 </h4>
               </div>
               <p className="text-gray-300 text-sm font-mono">
@@ -394,7 +394,7 @@ const Contact = () => {
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                     className="absolute top-full left-0 right-0 mt-2 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl z-50 overflow-hidden"
                   >
-                    <div className="p-2 space-y-1 max-h-80 overflow-y-auto custom-scrollbar">
+                    <div className="p-2 space-y-1 max-h-56 overflow-y-auto custom-scrollbar">
                       {serviceOptions.map((option, index) => (
                         <motion.button
                           key={option.value}
