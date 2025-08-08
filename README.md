@@ -1,5 +1,5 @@
 # 𝒫𝑜𝓇𝓉𝒻𝑜𝓁𝒾𝑜
-**Meet Savani 🚀**
+**Meet Savani Portfolio🚀**
 ================
 
 **Tagline:** "A React-based project for a modern, responsive, and scalable web application"
@@ -78,7 +78,7 @@ Meet Savani is a comprehensive React-based project that showcases a modern, resp
 **Author 👤**
 ------------
 
-Meet Savani is authored by [Your Name] and is licensed under the [License Name] license.
+Meet Savani Portfolio is authored by [Meet Savani] and is licensed under the [License Name] license.
 
 **License 📝**
 ------------
