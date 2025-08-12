@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import homeimage from '../assets/Image/home-main.svg';
+// import homeimage from '../assets/Image/ME.png';
 import Type from '../assets/code/type';
 import {
   ArrowRight,
@@ -65,7 +66,7 @@ const Home: React.FC = () => {
         exit={{ opacity: 0 }}
         className="min-h-screen pt-16 flex items-center bg-gradient-to-br from-black via-slate-900 to-black"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 ml-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ x: -100, opacity: 0 }}

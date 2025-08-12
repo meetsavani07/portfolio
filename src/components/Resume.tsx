@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import {
   Download,
-  Briefcase,
   GraduationCap,
   Award,
   Code2,
@@ -38,23 +37,23 @@ const Resume = () => {
   // Duplicate skills array for infinite scroll effect
   const infiniteSkills = [...skills, ...skills, ...skills];
 
-  const experience = [
-    {
-      title: 'Frontend Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2023 - Internship',
-      location: 'Remote',
-      description:
-        'Led the frontend development team in creating modern web applications using React and TypeScript.',
-      achievements: [
-        'Developed responsive web applications',
-        'Collaborated with design team',
-        'Implemented modern UI/UX practices',
-      ],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Git'],
-      link: '#',
-    },
-  ];
+  // const experience = [
+  //   {
+  //     title: 'Frontend Developer',
+  //     company: 'Tech Solutions Inc.',
+  //     period: '2023 - Internship',
+  //     location: 'Remote',
+  //     description:
+  //       'Led the frontend development team in creating modern web applications using React and TypeScript.',
+  //     achievements: [
+  //       'Developed responsive web applications',
+  //       'Collaborated with design team',
+  //       'Implemented modern UI/UX practices',
+  //     ],
+  //     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Git'],
+  //     link: '#',
+  //   },
+  // ];
 
   const education = [
     {
@@ -77,14 +76,14 @@ const Resume = () => {
 
   const certifications = [
     {
-      name: 'React Native Specialist',
+      name: 'React JS',
       issuer: 'Meta',
       date: '2022',
       icon: '🏆',
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      name: 'UI/UX Design Professional',
+      name: 'UI/UX Design',
       issuer: 'Google',
       date: '2022',
       icon: '🎨',
@@ -630,7 +629,7 @@ const Resume = () => {
             className="lg:col-span-2 space-y-8"
           >
             {/* Experience */}
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-green-500/30 transition-all duration-300">
+            {/* <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-green-500/30 transition-all duration-300">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Briefcase className="text-white" size={24} />
@@ -706,7 +705,6 @@ const Resume = () => {
                         {job.description}
                       </p>
 
-                      {/* Technologies */}
                       <div className="mb-6">
                         <h5 className="font-semibold text-green-400 mb-3 flex items-center gap-2">
                           <Code2 size={16} />
@@ -756,7 +754,7 @@ const Resume = () => {
                   </motion.div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Education */}
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-orange-500/30 transition-all duration-300">

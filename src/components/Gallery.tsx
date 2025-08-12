@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, X, Calendar, Users, Code, Zap, Eye } from 'lucide-react';
-import HMSMedicare from '../assets/Gallery-Image/HMS-Medicare.png';
+// import HMSMedicare from '../assets/Gallery-Image/HMS-Medicare.png';
 import MeetSavani from '../assets/Gallery-Image/Meet-Savani.png';
 import Freshmart from '../assets/Gallery-Image/Fresh-Mart.png';
 import Mindmap from '../assets/Gallery-Image/Mind-Map.png';
@@ -35,28 +35,28 @@ const Gallery = () => {
       challenges: 'Creating smooth animations while maintaining performance, implementing responsive design across all screen sizes',
       learnings: 'Advanced React patterns, Framer Motion animations, Tailwind CSS best practices'
     },
-    {
-      title: 'Hospital-Management-System',
-      category: 'Frontend Development',
-      image: HMSMedicare,
-      technologies: ['Figma', 'React', 'Vite', 'Tailwind CSS'],
-      link: 'https://hms-medicare.netlify.app/',
-      github: 'https://github.com/meetsavani07/HMS-Medicare',
-      description: 'A comprehensive hospital management system with patient records, appointment scheduling, and medical staff management features.',
-      detailedDescription: 'HMS Medicare is a comprehensive hospital management system designed to streamline healthcare operations. The system provides an intuitive interface for managing patient records, scheduling appointments, and coordinating medical staff activities.',
-      features: [
-        'Patient registration and record management',
-        'Appointment scheduling system',
-        'Medical staff management',
-        'Dashboard with analytics',
-        'Responsive design for tablets and mobile',
-        'Real-time data updates'
-      ],
-      duration: '3 weeks',
-      teamSize: '1 (Solo Project)',
-      challenges: 'Managing complex state for multiple user roles, creating an intuitive interface for healthcare workers',
-      learnings: 'Complex state management, healthcare domain knowledge, user experience design for professional applications'
-    },
+    // {
+    //   title: 'Hospital-Management-System',
+    //   category: 'Frontend Development',
+    //   image: HMSMedicare,
+    //   technologies: ['Figma', 'React', 'Vite', 'Tailwind CSS'],
+    //   link: 'https://hms-medicare.netlify.app/',
+    //   github: 'https://github.com/meetsavani07/HMS-Medicare',
+    //   description: 'A comprehensive hospital management system with patient records, appointment scheduling, and medical staff management features.',
+    //   detailedDescription: 'HMS Medicare is a comprehensive hospital management system designed to streamline healthcare operations. The system provides an intuitive interface for managing patient records, scheduling appointments, and coordinating medical staff activities.',
+    //   features: [
+    //     'Patient registration and record management',
+    //     'Appointment scheduling system',
+    //     'Medical staff management',
+    //     'Dashboard with analytics',
+    //     'Responsive design for tablets and mobile',
+    //     'Real-time data updates'
+    //   ],
+    //   duration: '3 weeks',
+    //   teamSize: '1 (Solo Project)',
+    //   challenges: 'Managing complex state for multiple user roles, creating an intuitive interface for healthcare workers',
+    //   learnings: 'Complex state management, healthcare domain knowledge, user experience design for professional applications'
+    // },
     {
       title: 'Grosry Store',
       category: 'Frontend Development',
