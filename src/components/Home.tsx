@@ -472,10 +472,10 @@ const Home: React.FC = () => {
               <div className="space-y-4 sm:space-y-6 text-gray-300 font-mono leading-relaxed text-sm sm:text-base">
                 {[
                   "I'm a passionate frontend developer with a creative mindset and a dedication to crafting exceptional user experiences. 🚀",
-                  'My expertise lies in modern web technologies, particularly React.js, Next.js, and TypeScript. I love bringing designs to life with smooth animations and responsive layouts.',
+                  'My expertise lies in modern web technologies, particularly React.JS, Next.JS, and TypeScript. I love bringing designs to life with smooth animations and responsive layouts.',
                   "I have a strong foundation in HTML5, CSS3, and JavaScript, and I'm constantly learning new technologies and best practices.",
                   "My approach combines clean code principles with modern design patterns to create scalable and maintainable applications. I'm particularly interested in performance optimization and accessibility.",
-                  'Currently exploring the exciting world of backend development with Node.js and database management to become a more well-rounded developer.',
+                  'Currently exploring the exciting world of backend development with Node.JS, Express.JS and database management to become a more well-rounded developer.',
                   'I believe in the power of continuous learning and staying updated with the latest industry trends and technologies. 📚',
                 ].map((text, index) => (
                   <motion.p
@@ -487,13 +487,14 @@ const Home: React.FC = () => {
                   >
                     {text.split(' ').map((word, wordIndex) => {
                       const isHighlight = [
-                        'React.js',
-                        'Next.js',
+                        'ReactJS',
+                        'NextJS',
                         'TypeScript',
                         'HTML5',
                         'CSS3',
                         'JavaScript',
-                        'Node.js',
+                        'NodeJS',
+                        'ExpressJS',
                       ].includes(word.replace(',', '').replace('.', ''));
                       return (
                         <span
