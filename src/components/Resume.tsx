@@ -68,7 +68,7 @@ const Resume = () => {
         'Data Structures',
         'Web Development',
         'Database Management',
-        'Software Engineering',
+        'Ui/UX Design'
       ],
       link: 'https://www.bmuni.ac.in/',
     },

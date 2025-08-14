@@ -126,7 +126,7 @@ const Contact = () => {
       description: 'Find me here',
       action: handleLocationClick,
       color: 'from-red-500 to-pink-500',
-      detail: 'Surat, Gujarat, India',
+      detail: 'Gujarat, India',
     },
   ];
 

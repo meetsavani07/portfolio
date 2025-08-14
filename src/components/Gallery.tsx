@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, X, Calendar, Users, Code, Zap, Eye } from 'lucide-react';
-// import HMSMedicare from '../assets/Gallery-Image/HMS-Medicare.png';
+import HMSMedicare from '../assets/Gallery-Image/HMS-Medicare.png';
 import MeetSavani from '../assets/Gallery-Image/Meet-Savani.png';
 import Freshmart from '../assets/Gallery-Image/Fresh-Mart.png';
 import Mindmap from '../assets/Gallery-Image/Mind-Map.png';
 import WorldWatch from '../assets/Gallery-Image/WorldWatch.png';
 import veggiebite from '../assets/Gallery-Image/VegggieBite.png';
+import cleartask from '../assets/Gallery-Image/ClearTask.png';
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
@@ -35,28 +36,27 @@ const Gallery = () => {
       challenges: 'Creating smooth animations while maintaining performance, implementing responsive design across all screen sizes',
       learnings: 'Advanced React patterns, Framer Motion animations, Tailwind CSS best practices'
     },
-    // {
-    //   title: 'Hospital-Management-System',
-    //   category: 'Frontend Development',
-    //   image: HMSMedicare,
-    //   technologies: ['Figma', 'React', 'Vite', 'Tailwind CSS'],
-    //   link: 'https://hms-medicare.netlify.app/',
-    //   github: 'https://github.com/meetsavani07/HMS-Medicare',
-    //   description: 'A comprehensive hospital management system with patient records, appointment scheduling, and medical staff management features.',
-    //   detailedDescription: 'HMS Medicare is a comprehensive hospital management system designed to streamline healthcare operations. The system provides an intuitive interface for managing patient records, scheduling appointments, and coordinating medical staff activities.',
-    //   features: [
-    //     'Patient registration and record management',
-    //     'Appointment scheduling system',
-    //     'Medical staff management',
-    //     'Dashboard with analytics',
-    //     'Responsive design for tablets and mobile',
-    //     'Real-time data updates'
-    //   ],
-    //   duration: '3 weeks',
-    //   teamSize: '1 (Solo Project)',
-    //   challenges: 'Managing complex state for multiple user roles, creating an intuitive interface for healthcare workers',
-    //   learnings: 'Complex state management, healthcare domain knowledge, user experience design for professional applications'
-    // },
+    {
+      title: 'ClearTask',
+      category: 'Frontend Development',
+      image: cleartask,
+      technologies: ['React', 'Tailwind', 'Framer Motion'],
+      link: 'https://cleartask-ms.netlify.app/',
+      github: 'https://github.com/meetsavani07/ClearTask.git',
+      description: 'The Simple To-Do App is a lightweight, user-friendly task management tool designed to help users stay organized and productive.',
+      detailedDescription: 'The Simple To-Do App is a lightweight, user-friendly task management tool designed to help users stay organized and productive. With an intuitive interface, users can easily add, edit, mark as completed, and delete tasks. The app ensures smooth interaction and quick updates, making it ideal for personal daily planning or basic project tracking.',
+      features: [
+        'Responsive design for both desktop and mobile.',
+        'Persistent storage using local storage.',
+        'Smooth animations using Framer Motion',
+        'User Login with google and email Store Data.',
+        'Filter Option with count task.',
+      ],
+      duration: '4 Day',
+      teamSize: '1 (Solo Project)',
+      challenges: 'Load task data two page in same time with using local storage.',
+      learnings: 'How Store Data In Local Storage and how get data from local storage.'
+    },
     {
       title: 'Grosry Store',
       category: 'Frontend Development',
@@ -122,6 +122,28 @@ const Gallery = () => {
       teamSize: '1 (Solo Project)',
       challenges: 'Integrating multiple news APIs, optimizing map performance with large datasets, creating intuitive navigation',
       learnings: 'API integration, geospatial data handling, state management with Zustand, Next.js optimization'
+    },
+    {
+      title: 'Hospital-Management-System',
+      category: 'Frontend Development',
+      image: HMSMedicare,
+      technologies: ['Figma', 'React', 'Vite', 'Tailwind CSS'],
+      link: 'https://hms-medicare.netlify.app/',
+      github: 'https://github.com/meetsavani07/HMS-Medicare',
+      description: 'A comprehensive hospital management system with patient records, appointment scheduling, and medical staff management features.',
+      detailedDescription: 'HMS Medicare is a comprehensive hospital management system designed to streamline healthcare operations. The system provides an intuitive interface for managing patient records, scheduling appointments, and coordinating medical staff activities.',
+      features: [
+        'Patient registration and record management',
+        'Appointment scheduling system',
+        'Medical staff management',
+        'Dashboard with analytics',
+        'Responsive design for tablets and mobile',
+        'Real-time data updates'
+      ],
+      duration: '3 weeks',
+      teamSize: '1 (Solo Project)',
+      challenges: 'Managing complex state for multiple user roles, creating an intuitive interface for healthcare workers',
+      learnings: 'Complex state management, healthcare domain knowledge, user experience design for professional applications'
     },
     {
       title: 'VeggieBite',
