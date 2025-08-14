@@ -66,7 +66,7 @@ const Home: React.FC = () => {
         exit={{ opacity: 0 }}
         className="min-h-screen pt-16 flex items-center bg-gradient-to-br from-black via-slate-900 to-black"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 ml-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:ml-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ x: -100, opacity: 0 }}
